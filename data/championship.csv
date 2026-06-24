@@ -1,0 +1,6 @@
+short_name,championship_name,id,created_at,updated_at
+f1_driver_world,FIA F1 Drivers’ World Championship,1,2026-02-06 15:17:13.067804+00,2026-02-06 15:17:13.067804+00
+f1_constructor_world,FIA F1 Constructors’ World Championship,2,2026-02-06 15:17:13.067804+00,2026-02-06 15:17:13.067804+00
+f1_cancelled_event,F1 Cancelled event,4,2026-04-06 16:31:21.914254+00,2026-04-06 16:31:21.914254+00
+f1_non_world,Non-World Championship,3,2026-02-06 15:17:13.067804+00,2026-02-06 15:17:13.067804+00
+testing_event,F1 Testing event,5,2026-04-06 16:50:55.327075+00,2026-04-06 16:50:55.327075+00

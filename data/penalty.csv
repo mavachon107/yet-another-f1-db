@@ -1,0 +1,62 @@
+created_at,updated_at,id,session_result_id,type,amount,reason
+2026-06-23 15:40:20.149974,2026-06-23 15:40:20.149974,6,51056,Grid penalty,15,Additional power unit elements have been use
+2026-06-23 15:42:24.267528,2026-06-23 15:42:24.267528,7,51037,Back of the grid,,Additional power unit elements have been used 
+2026-06-23 15:43:04.307124,2026-06-23 15:43:04.307124,8,51041,Back of the grid,,Additional power unit elements have been used 
+2026-06-23 15:43:39.369062,2026-06-23 15:43:39.369062,9,51046,Back of the grid,,Additional power unit elements have been used 
+2026-06-23 15:43:56.451557,2026-06-23 15:43:56.451557,10,51040,Back of the grid,,Additional power unit elements have been used 
+2026-06-23 15:44:11.378062,2026-06-23 15:44:11.378062,11,51040,Grid penalty,10,Additional restricted-number components have been used
+2026-06-23 15:45:13.233772,2026-06-23 15:45:13.233772,12,51049,Back of the grid,,Additional power unit elements have been used 
+2026-06-23 15:45:30.08173,2026-06-23 15:45:30.08173,13,51049,Grid penalty,10,Additional restricted-number components have been used
+2026-06-23 15:46:08.706539,2026-06-23 15:46:08.706539,14,51051,Back of the grid,,Additional power unit elements have been used 
+2026-06-23 15:46:44.686163,2026-06-23 15:46:44.686163,15,51051,Grid penalty,10,Additional power unit element has been used
+2026-06-23 15:47:05.662264,2026-06-23 15:47:05.662264,16,51051,Grid penalty,10,Additional restricted-number components have been used
+2026-06-23 15:48:01.344639,2026-06-23 15:48:01.344639,17,51056,Grid penalty,5,Additional restricted-number component have been used 
+2026-06-23 15:48:16.496425,2026-06-23 15:48:16.496425,18,51037,Grid penalty,5,Additional restricted-number component have been used 
+2026-06-23 15:49:52.915415,2026-06-23 15:49:52.915415,19,51055,Pit lane start,,Car modified whilst under Parc Fermé conditions and additional power unit elements have been used
+2026-06-23 16:07:50.443539,2026-06-23 16:07:50.443539,20,51118,Grid penalty,5,Additional power unit elements have been used 
+2026-06-23 16:08:17.408862,2026-06-23 16:08:17.408862,21,51119,Grid penalty,5,Additional power unit elements have been used 
+2026-06-23 16:08:35.743287,2026-06-23 16:08:35.743287,22,51120,Grid penalty,10,Additional power unit elements have been used 
+2026-06-23 16:08:58.832401,2026-06-23 16:08:58.832401,23,51121,Back of the grid,,Additional power unit elements have been used 
+2026-06-23 16:09:19.841173,2026-06-23 16:09:19.841173,24,51127,Grid penalty,5,Additional power unit elements have been used 
+2026-06-23 16:09:38.817721,2026-06-23 16:09:38.817721,25,51128,Grid penalty,15,Additional power unit elements have been used 
+2026-06-23 16:10:03.312651,2026-06-23 16:10:03.312651,26,51131,Back of the grid,,Additional power unit elements have been used 
+2026-06-23 16:10:55.20522,2026-06-23 16:10:55.20522,28,51131,Grid penalty,10,Accumulation of 5 reprimands
+2026-06-23 16:11:31.390009,2026-06-23 16:11:31.390009,29,51135,Grid penalty,15,Additional power unit elements have been used 
+2026-06-23 16:11:56.000374,2026-06-23 16:11:56.000374,30,51136,Grid penalty,15,Additional power unit elements have been used 
+2026-06-23 16:16:58.883651,2026-06-23 16:16:58.883651,31,51167,Pit lane start,,Modifying car under Parc Fermé conditions
+2026-06-23 16:43:35.157997,2026-06-23 16:43:35.157997,32,51213,Pit lane start,,Modifying car under Parc Fermé conditions
+2026-06-23 16:44:56.131806,2026-06-23 16:44:56.131806,33,51216,Grid penalty,5,Causing a collision with Guanyu Zhou at previous GP
+2026-06-23 16:46:42.6592,2026-06-23 16:46:42.6592,34,51238,Grid penalty,10,Exceeding quota on powertrain elements
+2026-06-23 16:47:13.090012,2026-06-23 16:47:13.090012,35,51240,Grid penalty,5,Exceeding quota on powertrain elements
+2026-06-23 16:47:48.24413,2026-06-23 16:47:48.24413,36,51245,Grid penalty,5,Exceeding quota on powertrain elements
+2026-06-23 16:48:08.847276,2026-06-23 16:48:08.847276,37,51250,Grid penalty,5,Exceeding quota on powertrain elements
+2026-06-23 16:49:08.980243,2026-06-23 16:49:08.980243,38,51254,Pit lane start,,Modifying car under Parc Fermé conditions
+2026-06-23 17:01:18.234873,2026-06-23 17:01:18.234873,39,51251,Grid penalty,5,Gearbox change
+2026-06-23 17:02:34.642926,2026-06-23 17:02:34.642926,40,51291,Grid penalty,5,Exceeding quota of powertrain elements
+2026-06-23 17:03:09.40444,2026-06-23 17:03:09.40444,41,51294,Grid penalty ,3,Causing a collision with Fernando Alonso at previous GP
+2026-06-23 22:53:46.663031,2026-06-23 22:53:46.663031,44,100997,Time penalty,10,Potentially dangerous driving
+2026-06-23 22:55:22.221267,2026-06-23 22:55:22.221267,45,100999,Time penalty,5,Causing a collision with Esteban Ocon
+2026-06-23 23:21:15.162276,2026-06-23 23:21:15.162276,46,126005,10 seconds Stop & Go,,Touching the car on the grid after the fifteen-second signal
+2026-06-24 01:19:01.536597,2026-06-24 01:19:01.536597,47,126227,Pit lane start,,Modifying car under Parc Fermé conditions
+2026-06-24 01:20:17.358434,2026-06-24 01:20:17.358434,48,126245,Time Penalty,10,Causing a collision with Franco Colapinto
+2026-06-24 01:38:58.847747,2026-06-24 01:38:58.847747,49,133974,Disqualified,,Non-compliant floor board
+2026-06-24 01:43:16.16969,2026-06-24 01:43:16.16969,50,133974,Pit lane start,,Modifying car under Parc Fermé conditions
+2026-06-24 01:45:12.085091,2026-06-24 01:45:12.085091,51,133538,Pit lane start,,Modifying car under Parc Fermé conditions
+2026-06-24 01:46:30.821352,2026-06-24 01:46:30.821352,52,133551,Time penalty,5,Speeding in the pit lane
+2026-06-24 01:47:10.914457,2026-06-24 01:47:10.914457,53,133550,Time penalty,10,Causing a collision with Alexander Albon
+2026-06-24 01:47:57.423315,2026-06-24 01:47:57.423315,54,133544,Time penalty,10,Changing trajectory to block another driver
+2026-06-24 01:48:29.578894,2026-06-24 01:48:29.578894,55,133544,10 seconds Stop & Go,,Ignoring yellow flags
+2026-06-24 01:48:51.682112,2026-06-24 01:48:51.682112,56,133555,Time penalty,5,Speeding in the pit lane
+2026-06-24 01:49:46.418209,2026-06-24 01:49:46.418209,57,133552,Time penalty - after chequered flag,5,Drove unnecessarily slowly under Safety Car
+2026-06-24 15:45:56.60639,2026-06-24 15:45:56.60639,58,133752,Drive-through,,Incorrect starting position
+2026-06-24 15:46:37.500613,2026-06-24 15:46:37.500613,59,133739,Time penalty,5,Speeding in the pit lane
+2026-06-24 15:47:05.018946,2026-06-24 15:47:05.018946,60,133749,Time penalty,5,Speeding in the pit lane
+2026-06-24 15:47:39.746775,2026-06-24 15:47:39.746775,61,133742,Time penalty,5,Speeding in the pit lane
+2026-06-24 15:48:11.315217,2026-06-24 15:48:11.315217,62,133749,Drive-through,,Penalty not served during the pit stop
+2026-06-24 15:48:52.745603,2026-06-24 15:48:52.745603,63,133750,Time penalty,10,Causinga collision with Carlos Sainz
+2026-06-24 15:49:19.786681,2026-06-24 15:49:19.786681,64,133751,Time penalty,5,Speeding in the pit lane
+2026-06-24 15:49:52.2186,2026-06-24 15:49:52.2186,65,133752,Time penalty,10,Incorrect starting position
+2026-06-24 15:50:13.882312,2026-06-24 15:50:13.882312,66,133755,Time penalty,5,Crossing track limits
+2026-06-24 15:52:02.425236,2026-06-24 15:52:02.425236,67,133928,Pit lane start,,Modifying car under Parc Fermé conditions
+2026-06-24 15:56:17.974814,2026-06-24 15:56:17.974814,68,133938,Time penalty,10,Ignoring yellow flags
+2026-06-24 15:56:47.224143,2026-06-24 15:56:47.224143,69,133944,Time penalty,5,Crossing track limits

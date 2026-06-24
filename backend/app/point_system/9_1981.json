@@ -1,0 +1,34 @@
+{
+    "point_system": [
+        {
+            "position": 1,
+            "point":9
+        },
+        {
+            "position": 2,
+            "point":6
+        },
+        {
+            "position": 3,
+            "point":4
+        },
+        {
+            "position": 4,
+            "point":3
+        },
+        {
+            "position": 5,
+            "point":2
+        },
+        {
+            "position": 6,
+            "point":1
+        },
+        {
+            "position": "fastest_lap",
+            "point":0
+        }
+
+    ],
+    "race_count" : "11"
+}

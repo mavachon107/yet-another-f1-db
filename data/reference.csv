@@ -1,0 +1,14 @@
+id,entity_type,entity_id,ref_type,url,citation,notes,created_at,updated_at
+1,event,1243,website,https://www.motorsportmagazine.com/database/races/1951-syracuse-grand-prix/,,,2026-02-09 18:56:13.707861+00,2026-02-09 18:56:13.707861+00
+2,event,1243,website,https://www.oldracingcars.com/f1/results/1951/siracusa/,,,2026-02-09 19:12:50.418679+00,2026-02-09 19:12:50.418679+00
+3,constructor,31,website,https://www.formulaonehistory.com/teams/williams/,,,2026-02-10 02:25:43.147357+00,2026-02-10 02:25:43.147357+00
+4,constructor,120,website,https://www.formulaonehistory.com/teams/wolf/,,,2026-02-10 23:28:53.837169+00,2026-02-10 23:28:53.837169+00
+5,event,320,website,https://www.statsf1.com/en/1977/espagne/engages.aspx,,,2026-02-11 00:20:08.167874+00,2026-02-11 00:20:08.167874+00
+6,event,321,website,https://www.statsf1.com/en/1977/monaco/engages.aspx,,,2026-02-11 00:23:01.031723+00,2026-02-11 00:23:01.031723+00
+7,event,322,website,https://www.statsf1.com/en/1977/belgique/engages.aspx,,,2026-02-11 00:25:02.070289+00,2026-02-11 00:25:02.070289+00
+8,event,323,website,https://www.statsf1.com/en/1977/suede/engages.aspx,,,2026-02-11 01:01:02.385005+00,2026-02-11 01:01:02.385005+00
+9,event,333,website,https://www.statsf1.com/en/1978/argentine/engages.aspx,,,2026-02-11 02:17:42.098198+00,2026-02-11 02:17:42.098198+00
+10,constructor,133,website,https://www.statsf1.com/en/ats.aspx,,,2026-02-11 02:25:52.44487+00,2026-02-11 02:25:52.44487+00
+11,constructor,192,website,https://www.chicanef1.com/indiv.pl?name=ATS%20%28Ita%29&type=c,,,2026-02-11 03:00:21.268221+00,2026-02-11 03:00:21.268221+00
+12,constructor,86,website,https://www.chicanef1.com/indiv.pl?name=Fittipaldi&type=c,,,2026-02-11 03:14:53.778354+00,2026-02-11 03:14:53.778354+00
+13,team,451,website,https://www.chicanef1.com/indiv.pl?name=Aston%20Martin&type=c,,,2026-02-12 13:43:09.482547+00,2026-02-12 13:43:09.482547+00

@@ -1,0 +1,25 @@
+# Straight Line F1
+
+> Straight Line F1 (Straight Line F1 Stats Data Hub) is a research-focused archive
+> of Formula 1 historical data: race results, championships, drivers, teams,
+> constructors, circuits, and statistics from 1950 to today.
+
+## Sections
+
+- [Seasons](https://f1statsdatahub.com/seasons): every F1 season and its events
+- [Drivers](https://f1statsdatahub.com/drivers): driver profiles, careers, and stats
+- [Teams](https://f1statsdatahub.com/teams): teams and their results
+- [Constructors](https://f1statsdatahub.com/constructors): constructors and lineage
+- [Circuits](https://f1statsdatahub.com/circuits): circuits and event history
+- [Statistics](https://f1statsdatahub.com/stats/global): global, driver, and constructor stats
+
+## Developers
+
+- Public API docs: https://api.f1statsdatahub.com/v1/docs
+- An MCP connector is available for AI assistants (Claude Desktop and others).
+
+## Notes
+
+- Data covers all FIA Formula 1 World Championship events from 1950 to the present.
+- This site is an independent, non-commercial archive and is not affiliated with
+  Formula 1, the FIA, or any team.

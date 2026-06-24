@@ -1,0 +1,378 @@
+id,constructor_id,model_number,layout_id,cylinder_count,displacement_cc,aspiration_type_id,created_at,updated_at,tagged_indicator,tagged_name,slug
+1,75,RV10,V,10,3000,naturally_aspired,,2026-03-04 14:59:35.208526+00,f,,fondmetal_rv10
+141,,Climax,,,,,,,f,,climax
+261,,ferrari-555-25-l4,,,,,,,f,,ferrari_555_25_l4
+58,208,TJ2006,V,10,3000,naturally_aspired,,2026-03-23 01:49:01.435204+00,f,,cosworth_tj2006
+67,2,048,V,10,3000,naturally_aspired,,2026-03-04 00:43:26.537554+00,f,,ferrari_048
+2,,yamaha-ox10c-30-v10,,,,,,,f,,yamaha_ox10c_30_v10
+3,28,M14,V,6,1600,hybrid,,2026-02-24 00:57:41.510731+00,f,,mercedes_m14
+4,30,F1-2016,V,6,1600,hybrid,,2026-03-10 23:29:49.538751+00,t,TAG Heuer,renault_f1_2016
+5,,emw-6-20-l6,,,,,,,f,,emw_6_20_l6
+6,,peugeot-a6-35-v10,,,,,,,f,,peugeot_a6_35_v10
+7,,toyota-rvx-05-30-v10,,,,,,,f,,toyota_rvx_05_30_v10
+8,,Bpm,,,,,,,f,,bpm
+9,,repco-620-30-v8,,,,,,,f,,repco_620_30_v8
+10,196,M12/13,L,4,1500,turbocharged,,2026-02-20 21:17:15.062474+00,f,,megatron_m12_13
+11,202,A18,V,10,3000,naturally_aspired,,2026-03-04 00:36:07.078544+00,f,,peugeot_a18
+12,202,A16,V,10,3000,naturally_aspired,,2026-03-04 00:02:36.496381+00,f,,peugeot_a16
+13,,Talbot 23CV L6,,,,,,,f,,talbot_23cv_l6
+14,30,E-Tech RE24,V,6,1600,hybrid,,2026-02-24 01:01:34.67458+00,f,,renault_e_tech_re24
+15,,lea-francis-20-l4,,,,,,,f,,lea_francis_20_l4
+16,212,LH10,V,10,3500,naturally_aspired,,2026-03-11 00:10:05.673689+00,f,,ilmor_lh10
+17,,honda-ra002e-30-v10,,,,,,,f,,honda_ra002e_30_v10
+18,2,049,V,10,3000,naturally_aspired,,2026-03-04 14:53:49.887095+00,f,,ferrari_049
+19,2,062 EVO,V,6,1600,hybrid,,2026-02-27 03:57:22.820298+00,f,,ferrari_062_evo
+20,,Ford,,,,,,,f,,ford
+21,204,SPE-04A,V,10,3000,naturally_aspired,,2026-03-04 14:47:52.939972+00,f,,petronas_spe_04a
+22,,ford-edd-30-v8,,,,,,,f,,ford_edd_30_v8
+24,125,3512,V,12,3500,naturally_aspired,,2026-03-11 02:19:20.208855+00,f,,porsche_3512
+25,,ferrari-178-15-v6,,,,,,,f,,ferrari_178_15_v6
+26,142,P80,V,10,3000,naturally_aspired,,2026-03-07 00:59:35.401466+00,f,,bmw_p80
+27,56,RA806E,V,8,2400,naturally_aspired,,2026-03-23 01:45:38.134126+00,f,,honda_ra806e
+28,,aston-martin-rb6-25-l6,,,,,,,f,,aston_martin_rb6_25_l6
+29,,ford-rs1-30-v10,,,,,,,f,,ford_rs1_30_v10
+30,,alfa-romeo-t33-30-v8,,,,,,,f,,alfa_romeo_t33_30_v8
+31,,cummins-30-l6-s,,,,,,,f,,cummins_30_l6_s
+32,6,23CV,L,6,4500,naturally_aspired,,2026-02-15 21:28:00.989161+00,f,,talbot_lago_23cv
+33,,peugeot-a10-30-v10,,,,,,,f,,peugeot_a10_30_v10
+34,,ford-rs2-30-v10,,,,,,,f,,ford_rs2_30_v10
+35,30,Energy F1 2015,V,6,1600,hybrid,,2026-03-13 20:47:12.567357+00,t,,renault_energy_f1_2015
+36,30,RS26,V,8,2400,naturally_aspired,,2026-03-23 01:47:17.869846+00,f,,renault_rs26
+37,,climax-fpf-28-l4,,,,,,,f,,climax_fpf_28_l4
+38,,mercedes-fo-110r-30-v10,,,,,,,f,,mercedes_fo_110r_30_v10
+39,56,RA808E,V,8,2400,naturally_aspired,,2026-03-23 01:31:58.735358+00,f,,honda_ra808e
+40,2,065,V,6,1600,hybrid,,2026-02-25 15:53:09.761119+00,f,,ferrari_065
+41,28,M12,V,6,1600,hybrid,,2026-02-24 00:58:29.989015+00,f,,mercedes_m12
+42,,renault-rs5-35-v10,,,,,,,f,,renault_rs5_35_v10
+43,56,RA621H,V,6,1600,hybrid,,2026-02-25 04:32:10.249398+00,f,,honda_ra621h
+44,,honda-ra004e-30-v10,,,,,,,f,,honda_ra004e_30_v10
+45,,TJ2005 V10 3.0,,,,,,,f,,tj2005_v10_3_0
+46,,bmw-p83-30-v10,,,,,,,f,,bmw_p83_30_v10
+47,1,158,L,8,1500,supercharged,,2026-02-15 20:35:47.058531+00,f,,alfa_romeo_158
+48,,pratt-whitney-stn76-tbn,,,,,,,f,,pratt_whitney_stn76_tbn
+49,,osca-372-15-l4,,,,,,,f,,osca_372_15_l4
+50,199,OX99,V,12,3500,naturally_aspired,,2026-03-11 00:14:44.631478+00,f,,yamaha_ox99
+51,95,MS81,V,12,2993,naturally_aspired,,2026-02-14 14:17:31.562699+00,f,,matra_ms81
+52,,Gordini,,,,,,,f,,gordini
+53,,toyota-rvx-04-30-v10,,,,,,,f,,toyota_rvx_04_30_v10
+54,56,RA101E,V,10,3500,naturally_aspired,,2026-03-10 23:36:05.445505+00,f,,honda_ra101e
+68,30,RE17,V,6,1600,hybrid,,2026-03-10 23:29:09.650726+00,f,,renault_re17
+71,28,M17 E Performance,V,6,1600,hybrid,,2026-03-07 19:24:48.38369+00,f,,mercedes_m17_e_performance
+81,56,RA001E,V,10,3000,naturally_aspired,,2026-03-07 00:58:03.339617+00,f,,honda_ra001e
+55,206,GC37-01,V,10,3000,naturally_aspired,,2026-03-04 00:22:58.219952+00,f,,mecachrome_gc37_01
+56,2,015,F,12,2991,naturally_aspired,,2026-02-14 14:00:07.901807+00,f,,ferrari_015
+57,,bmw-p84-30-v10,,,,,,,f,,bmw_p84_30_v10
+59,,honda-ra272e-15-v12,,,,,,,f,,honda_ra272e_15_v12
+60,5,4CLT,L,4,1500,supercharged,,2026-02-15 21:50:55.64863+00,f,,maserati_4clt
+61,,ferrari-040-35-v12,,,,,,,f,,ferrari_040_35_v12
+62,2,064,V,6,1600,hybrid,,2026-02-25 16:04:02.012076+00,f,,ferrari_064
+63,56,RA616H,V,6,1600,hybrid,,2026-02-27 04:25:33.570738+00,f,,honda_ra616h
+64,,ford-hbe7-8-35-v8,,,,,,,f,,ford_hbe7_8_35_v8
+65,,ferrari-046-30-v10,,,,,,,f,,ferrari_046_30_v10
+66,,ferrari-242-30-v12,,,,,,,f,,ferrari_242_30_v12
+69,72,F35,W,12,3500,naturally_aspired,,2026-02-21 23:44:43.412801+00,f,,life_f35
+70,,ferrari-ds50-25-v8,,,,,,,f,,ferrari_ds50_25_v8
+72,142,P86/8,V,8,2400,naturally_aspired,,2026-03-23 01:30:55.256433+00,f,,bmw_p86_8
+73,,Fiat L4s,,,,,,,f,,fiat_l4s
+74,,Bugatti,,,,,,,f,,bugatti
+75,,alfa-romeo-giulietta-15-l4,,,,,,,f,,alfa_romeo_giulietta_15_l4
+76,49,T2-F1,V,10,3000,naturally_aspired,,2026-03-02 02:24:13.774804+00,f,,arrows_t2_f1
+77,,ford-hbf7-8-35-v8,,,,,,,f,,ford_hbf7_8_35_v8
+78,,brm-p101-30-v12,,,,,,,f,,brm_p101_30_v12
+79,,bpm-20-l4,,,,,,,f,,bpm_20_l4
+80,,honda-ra273e-30-v12,,,,,,,f,,honda_ra273e_30_v12
+82,,maserati-tipo-6-15-l4,,,,,,,f,,maserati_tipo_6_15_l4
+83,199,OX88,V,8,3500,naturally_aspired,,2026-02-21 02:09:42.706818+00,f,,yamaha_ox88
+84,197,GV,V,10,3500,naturally_aspired,,2026-03-10 23:34:48.108978+00,f,,judd_gv
+85,95,MS73,V,12,3000,naturally_aspired,,2026-03-11 03:16:16.773542+00,f,,matra_ms73
+86,2,047,V,10,3000,naturally_aspired,,2026-03-04 00:10:47.685636+00,f,,ferrari_047
+87,199,OX11A,V,10,3000,naturally_aspired,,2026-03-01 04:29:39.366242+00,f,,yamaha_ox11a
+88,205,FB01,V,10,3000,naturally_aspired,,2026-03-04 00:39:40.984986+00,f,,playlife_fb01
+89,30,RE18,V,6,1600,hybrid,,2026-03-10 23:29:20.181389+00,f,,renault_re18
+90,30,F1-2018,V,6,1600,hybrid,,2026-03-10 23:30:50.748646+00,t,TAG Heuer,renault_f1_2018
+91,,mercedes-fo-110q-30-v10,,,,,,,f,,mercedes_fo_110q_30_v10
+92,,climax-fpf-15-l4,,,,,,,f,,climax_fpf_15_l4
+93,,renault-rs6-35-v10,,,,,,,f,,renault_rs6_35_v10
+94,,ford-hbc6-35-v8,,,,,,,f,,ford_hbc6_35_v8
+95,2,050,V,10,3000,naturally_aspired,,2026-03-07 01:19:54.740667+00,f,,ferrari_050
+96,207,FB02,V,10,3000,naturally_aspired,,2026-03-04 14:26:37.372658+00,f,,supertec_fb02
+97,56,RA615H,V,6,1600,hybrid,,2026-03-13 20:50:34.268486+00,f,,honda_ra615h
+98,,renault-ef4-15-v6-t,,,,,,,f,,renault_ef4_15_v6_t
+99,,Cosworth,,,,,,,f,,cosworth
+100,,alta-f2-20-l4,,,,,,,f,,alta_f2_20_l4
+101,194,415T,L,4,1496,turbocharged,,2026-02-14 14:23:25.467987+00,f,,hart_415t
+103,204,SPE-01D,V,10,3000,naturally_aspired,,2026-03-04 00:10:12.78213+00,f,,petronas_spe_01d
+104,,ferrari-001-1-30-f12,,,,,,,f,,ferrari_001_1_30_f12
+105,193,HB,V,8,3500,naturally_aspired,,2026-02-21 23:34:49.173635+00,f,,ford_cosworth_hb
+106,,climax-fpe-30-v8,,,,,,,f,,climax_fpe_30_v8
+107,30,RE16,V,6,1600,hybrid,,2026-03-10 23:29:00.046124+00,f,,renault_re16
+108,56,RA617H,V,6,1600,hybrid,,2026-02-27 03:35:48.914762+00,f,,honda_ra617h
+109,30,RS3,V,10,3500,naturally_aspired,,2026-03-10 23:38:11.21257+00,f,,renault_rs3
+110,56,RA109E,V,10,3500,naturally_aspired,,2026-02-21 01:53:44.986808+00,f,,honda_ra109e
+111,,bmw-p82-30-v10,,,,,,,f,,bmw_p82_30_v10
+112,,brm-p25-25-l4,,,,,,,f,,brm_p25_25_l4
+113,,peugeot-a12-ev5-30-v10,,,,,,,f,,peugeot_a12_ev5_30_v10
+114,202,SPE-03A,V,10,3000,naturally_aspired,,2026-03-04 00:40:53.26854+00,f,,peugeot_spe_03a
+115,210,001,V,10,3000,naturally_aspired,,2026-03-07 01:13:08.601922+00,f,,asiatech_001
+116,48,RVX-09,V,8,2400,naturally_aspired,,2026-03-23 01:23:49.66986+00,f,,toyota_rvx_09
+117,,climax-fwmv-15-v8,,,,,,,f,,climax_fwmv_15_v8
+118,,Brm,,,,,,,f,,brm
+119,2,046/2,V,10,3000,naturally_aspired,,2026-03-01 04:41:20.272427+00,f,,ferrari_046_2
+120,28,FO 108F,V,8,2400,naturally_aspired,,2026-03-21 20:34:36.452582+00,f,,mercedes_fo_108f
+121,5,Offenhauser ,L,4,3000,supercharged,,2026-02-21 15:08:15.940071+00,f,,maserati_offenhauser
+122,28,PU106A,V,6,1600,hybrid,,2026-03-14 03:18:35.769643+00,f,,mercedes_pu106a
+123,,brm-p142-30-v12,,,,,,,f,,brm_p142_30_v12
+124,56,RA166E,V,6,1500,turbocharged,,2026-02-16 22:24:53.314559+00,f,,honda_ra166e
+125,,toyota-rvx-03-30-v10,,,,,,,f,,toyota_rvx_03_30_v10
+126,1,115-12,F,12,2995,naturally_aspired,,2026-02-14 14:40:19.47078+00,f,,alfa_romeo_115_12
+127,193,DFV,V,8,2993,naturally_aspired,,2026-02-14 04:02:51.384884+00,f,,ford_cosworth_dfv
+128,,osca-4500-45-v12,,,,,,,f,,osca_4500_45_v12
+129,,honda-rbpt-rbpth001-16-v6-t-h,,,,,,,f,,honda_rbpt_rbpth001_16_v6_t_h
+130,,ford-hbd6-35-v8,,,,,,,f,,ford_hbd6_35_v8
+131,30,E-Tech 19,V,6,1600,hybrid,,2026-02-25 20:04:41.900905+00,f,,renault_e_tech_19
+132,,toyota-rvx-02-30-v10,,,,,,,f,,toyota_rvx_02_30_v10
+133,48,RVX-08,V,8,2400,naturally_aspired,,2026-03-23 01:30:01.548973+00,f,,toyota_rvx_08
+134,,bugatti-25-l8,,,,,,,f,,bugatti_25_l8
+135,2,031,V,6,1500,turbocharged,,2026-02-16 02:23:04.794852+00,f,,ferrari_031
+136,,hart-1035-35-v10,,,,,,,f,,hart_1035_35_v10
+137,,mercedes-fo-110-30-v10,,,,,,,f,,mercedes_fo_110_30_v10
+138,,matra-ms71-30-v12,,,,,,,f,,matra_ms71_30_v12
+139,48,RVX-07,V,8,2400,naturally_aspired,,2026-03-23 01:34:20.561136+00,f,,toyota_rvx_07
+140,208,CR-2,V,10,3000,naturally_aspired,,2026-03-04 14:34:50.452846+00,f,,cosworth_cr_2
+142,,Ferrari 066/15,,,,,,,f,,ferrari_066_15
+143,,mugen-honda-mf-301-30-v10,,,,,,,f,,mugen_honda_mf_301_30_v10
+144,,mercedes-m196-25-l8,,,,,,,f,,mercedes_m196_25_l8
+145,,rbpt-rbpth001-16-v6-t-h,,,,,,,f,,rbpt_rbpth001_16_v6_t_h
+146,,cosworth-ca2011-24-v8,,,,,,,f,,cosworth_ca2011_24_v8
+147,,1260 V12 3.0,,,,,,,f,,1260_v12_3_0
+148,,petronas-03a-30-v10,,,,,,,f,,petronas_03a_30_v10
+149,142,E41,V,10,3000,naturally_aspired,,2026-03-04 14:28:31.438202+00,f,,bmw_e41
+150,30,RS27-2013,V,8,2400,naturally_aspired,,2026-03-21 20:26:59.008046+00,f,,renault_rs27_2013
+151,208,CA2013,V,8,2400,naturally_aspired,,2026-03-21 20:31:08.198458+00,f,,cosworth_ca2013
+152,,mugen-honda-mf-301ha-30-v10,,,,,,,f,,mugen_honda_mf_301ha_30_v10
+153,30,RS27,V,8,2400,naturally_aspired,,2026-03-23 01:27:23.83558+00,f,,renault_rs27
+154,,bmw-m10-20-l4,,,,,,,f,,bmw_m10_20_l4
+155,,alfa-romeo-115-12-30-f12,,,,,,,f,,alfa_romeo_115_12_30_f12
+156,142,M12/13,L,4,1500,turbocharged,,2026-02-14 23:22:44.97044+00,f,,bmw_m12_13
+157,,055 V10 3.0,,,,,,,f,,055_v10_3_0
+158,56,RA618H,V,6,1600,hybrid,,2026-02-27 03:56:25.04837+00,f,,honda_ra618h
+159,193,DFR,V,8,3500,naturally_aspired,,2026-02-21 00:23:50.103075+00,f,,ford_cosworth_dfr
+160,,matra-ms76-30-v12,,,,,,,f,,matra_ms76_30_v12
+161,,ferrari-228-24-v6,,,,,,,f,,ferrari_228_24_v6
+162,,cosworth-cr-6-30-v10,,,,,,,f,,cosworth_cr_6_30_v10
+163,,petronas-04a-30-v10,,,,,,,f,,petronas_04a_30_v10
+164,,petronas-02a-30-v10,,,,,,,f,,petronas_02a_30_v10
+165,28,M13,V,6,1600,hybrid,,2026-02-24 00:58:53.077522+00,f,,mercedes_m13
+166,205,GC37-01,V,10,3000,naturally_aspired,,2026-03-04 00:04:34.737597+00,f,,playlife_gc37_01
+167,1,1260,V,12,2991,naturally_aspired,,2026-02-14 14:05:55.836048+00,f,,alfa_romeo_1260
+168,,alta-gp-25-l4,,,,,,,f,,alta_gp_25_l4
+169,,petronas-05a-30-v10,,,,,,,f,,petronas_05a_30_v10
+170,28,FO 110K,V,10,3000,naturally_aspired,,2026-03-07 01:17:53.864147+00,f,,mercedes_fo_110k
+171,203,MF-301HB,V,10,3000,naturally_aspired,,2026-03-01 04:37:52.289867+00,f,,mugen_honda_mf_301hb
+172,193,CR-1,V,10,3000,naturally_aspired,,2026-03-04 00:37:49.717959+00,f,,ford_cosworth_cr_1
+173,,novi-30-l8-s,,,,,,,f,,novi_30_l8_s
+174,,de-tomaso-15-f8,,,,,,,f,,de_tomaso_15_f8
+175,,hart-830-30-v8,,,,,,,f,,hart_830_30_v8
+176,28,M08,V,6,1600,hybrid,,2026-02-27 03:36:24.717997+00,f,,mercedes_m08
+177,,Renault E Tech Re22 16 V6 T H,,,,,,,f,,renault_e_tech_re22_16_v6_t_h
+178,28,M16,V,6,1600,hybrid,,2026-02-24 00:57:15.978191+00,f,,mercedes_m16
+179,142,P86,V,8,2400,naturally_aspired,,2026-03-23 01:43:54.71857+00,f,,bmw_p86
+180,28,FO 110G,V,10,3000,naturally_aspired,,2026-03-04 00:21:26.479364+00,f,,mercedes_fo_110g
+181,56,RBPTH002,V,6,1600,hybrid,,2026-02-24 00:54:00.826099+00,f,,honda_rbpth002
+182,,Supertec,,,,,,,f,,supertec
+183,2,021,V,6,1496,turbocharged,,2026-02-14 14:20:31.384772+00,f,,ferrari_021
+184,,Osca,,,,,,,f,,osca
+185,,butterworth-20-f4,,,,,,,f,,butterworth_20_f4
+186,28,PU106C,V,6,1600,hybrid,,2026-02-27 04:14:35.506699+00,f,,mercedes_pu106c
+187,28,FO 110H,V,10,3000,naturally_aspired,,2026-03-04 00:44:01.978137+00,f,,mercedes_fo_110h
+188,28,FO 108V,V,8,2400,naturally_aspired,,2026-03-23 01:33:11.995858+00,f,,mercedes_fo_108v
+189,30,RS27-2012,V,8,2400,naturally_aspired,,2026-03-21 20:39:17.92779+00,f,,renault_rs27_2012
+190,,maserati-9-f1-30-v12,,,,,,,f,,maserati_9_f1_30_v12
+191,,scarab-25-l4,,,,,,,f,,scarab_25_l4
+192,203,MF-301HC,V,10,3000,naturally_aspired,,2026-03-02 02:23:40.152509+00,f,,mugen_honda_mf_301hc
+193,125,TAG P01,V,6,1500,turbocharged,,2026-02-16 01:25:10.327521+00,f,,porsche_tag_p01
+194,,matra-ms12-30-v12,,,,,,,f,,matra_ms12_30_v12
+195,,bristol-bs2-22-l6,,,,,,,f,,bristol_bs2_22_l6
+197,2,032,V,6,1500,turbocharged,,2026-02-16 22:32:22.167764+00,f,,ferrari_032
+198,,ford-hbc7-8-35-v8,,,,,,,f,,ford_hbc7_8_35_v8
+199,2,035/5,V,12,3500,naturally_aspired,,2026-02-21 02:03:13.382538+00,f,,ferrari_035_5
+200,2,061,V,6,1600,hybrid,,2026-03-10 03:50:21.245986+00,f,,ferrari_061
+201,208,CR-3,V,10,3000,naturally_aspired,,2026-03-07 01:04:59.937272+00,f,,cosworth_cr_3
+202,203,MF-301HE,V,10,3000,naturally_aspired,,2026-03-04 14:27:25.646171+00,f,,mugen_honda_mf_301he
+203,,mercedes-fo-110m-30-v10,,,,,,,f,,mercedes_fo_110m_30_v10
+204,,Vanwall,,,,,,,f,,vanwall
+205,,honda-ra005e-30-v10,,,,,,,f,,honda_ra005e_30_v10
+206,193,VJ Zetec-R,V,10,3000,naturally_aspired,,2026-03-04 00:34:11.367414+00,f,,ford_cosworth_vj_zetec_r
+207,,ford-edc-30-v8,,,,,,,f,,ford_edc_30_v8
+208,,Maserati,,,,,,,f,,maserati
+209,,ferrari-038-35-v12,,,,,,,f,,ferrari_038_35_v12
+210,30,Energy F1 2014,V,6,1600,hybrid,,2026-03-14 03:14:27.238003+00,f,,renault_energy_f1_2014
+211,209,,V,10,3000,naturally_aspired,,2026-03-07 01:03:26.402198+00,f,,european
+212,,kuchen-20-v8,,,,,,,f,,kuchen_20_v8
+213,194,830 AV7,V,8,3000,naturally_aspired,,2026-03-01 04:35:21.519229+00,f,,hart_830_av7
+214,193,JD Zetec-R,V,10,3000,naturally_aspired,,2026-03-01 04:31:29.920334+00,f,,ford_cosworth_jd_zetec_r
+215,16,JAP,V,2,1100,naturally_aspired,,2026-02-16 18:38:02.966416+00,f,,cooper_jap
+216,,mercedes-fo-108t-24-v8,,,,,,,f,,mercedes_fo_108t_24_v8
+217,,maserati-a6-20-l6,,,,,,,f,,maserati_a6_20_l6
+218,30,RS2,V,10,3500,naturally_aspired,,2026-02-21 23:31:48.685761+00,f,,renault_rs2
+219,,tecno-series-p-30-f12,,,,,,,f,,tecno_series_p_30_f12
+220,56,RBPTH001,V,6,1600,hybrid,,2026-02-24 23:57:17.364755+00,f,,honda_rbpth001
+221,,porsche-547-3-15-f4,,,,,,,f,,porsche_547_3_15_f4
+222,,BRM,,,,,,,f,,brm_2
+223,,renault-rs25-30-v10,,,,,,,f,,renault_rs25_30_v10
+224,,Rbpt Rbpth001 16 V6 T H,,,,,,,f,,rbpt_rbpth001_16_v6_t_h_2
+225,2,060,V,6,1600,hybrid,,2026-03-10 03:53:02.694389+00,f,,ferrari_060
+226,30,RS27-2011,V,8,2400,naturally_aspired,,2026-03-22 02:55:21.895316+00,f,,renault_rs27_2011
+227,30,EF4,V,6,1500,turbocharged,,2026-02-16 01:39:42.300351+00,f,,renault_ef4
+228,208,TJ2005,V,10,3000,naturally_aspired,,2026-03-23 16:12:32.463012+00,f,,cosworth_tj2005
+229,204,01A,V,10,3000,naturally_aspired,,2026-03-07 01:22:14.724206+00,f,,petronas_01a
+230,2,066/12,V,6,1600,hybrid,,2026-02-24 01:02:52.656118+00,f,,ferrari_066_12
+231,56,RA167E,V,6,1500,turbocharged,,2026-02-20 21:00:06.095392+00,f,,honda_ra167e
+232,208,CA2011,V,8,2400,naturally_aspired,,2026-03-22 02:51:22.041393+00,f,,cosworth_ca2011
+233,30,RS21,V,10,3000,naturally_aspired,,2026-03-07 01:08:39.037804+00,f,,renault_rs21
+234,30,RS1,V,10,3500,naturally_aspired,,2026-02-21 01:55:34.676583+00,f,,renault_rs1
+235,,Kuchen,,,,,,,f,,kuchen
+236,197,CV,V,8,3500,naturally_aspired,,2026-02-21 00:21:42.883352+00,f,,judd_cv
+238,,bmw-p84-5-30-v10,,,,,,,f,,bmw_p84_5_30_v10
+239,28,M10,V,6,1600,hybrid,,2026-02-24 00:59:26.807179+00,f,,mercedes_m10
+240,203,MF-301HD,V,10,3000,naturally_aspired,,2026-03-04 00:27:20.559603+00,f,,mugen_honda_mf_301hd
+241,2,059/3,V,6,1600,hybrid,,2026-03-13 20:42:58.543496+00,f,,ferrari_059_3
+242,,jaguar-xk-34-l6,,,,,,,f,,jaguar_xk_34_l6
+243,,mugen-honda-mf-351h-35-v10,,,,,,,f,,mugen_honda_mf_351h_35_v10
+244,56,RA626H,V,6,1600,hybrid,,2026-03-07 19:23:43.93438+00,f,,honda_ra626h
+245,28,M15,V,6,1600,hybrid,,2026-02-24 00:57:04.846718+00,f,,mercedes_m15
+246,,Bmw,,,,,,,f,,bmw
+247,28,FO 108W,V,8,2400,naturally_aspired,,2026-03-23 01:26:43.591135+00,f,,mercedes_fo_108w
+248,193,ECA Zetec-R,V,8,3000,naturally_aspired,,2026-03-01 04:32:47.941624+00,f,,ford_cosworth_eca_zetec_r
+249,,cosworth-cr-5-30-v10,,,,,,,f,,cosworth_cr_5_30_v10
+250,,yamaha-ox10a-35-v10,,,,,,,f,,yamaha_ox10a_35_v10
+251,,cosworth-cr-3l-30-v10,,,,,,,f,,cosworth_cr_3l_30_v10
+252,,gordini-20-20-l6,,,,,,,f,,gordini_20_20_l6
+253,56,RA000E,V,10,3000,naturally_aspired,,2026-03-04 14:43:16.78193+00,f,,honda_ra000e
+254,156,15C,L,4,1500,supercharged,,2026-02-16 18:40:46.373749+00,f,,gordini_15c
+255,205,FB02,V,10,3000,naturally_aspired,,2026-03-04 14:47:01.061703+00,f,,playlife_fb02
+256,,lancia-ds50-25-v8,,,,,,,f,,lancia_ds50_25_v8
+257,,Porsche,,,,,,,f,,porsche
+258,,Ferrari 065 6 16 V6 T H,,,,,,,f,,ferrari_065_6_16_v6_t_h
+259,,Offenhauser L4 4.5,,,,naturally_aspired,,2026-03-01 20:19:04.221748+00,f,,offenhauser_l4_4_5
+260,,Speluzzi 1.5L 4C Super charged,,,,,,,f,,speluzzi_1_5l_4c_super_charged
+262,,ferrari-056-2007-24-v8,,,,,,,f,,ferrari_056_2007_24_v8
+263,,renault-rs24-30-v10,,,,,,,f,,renault_rs24_30_v10
+264,,ford-hba5-35-v8,,,,,,,f,,ford_hba5_35_v8
+265,,renault-rs23-30-v10,,,,,,,f,,renault_rs23_30_v10
+266,30,EF15,V,6,1500,turbocharged,,2026-02-16 18:05:25.934399+00,f,,renault_ef15
+267,28,FO 108Y,V,8,2400,naturally_aspired,,2026-03-22 02:52:20.221595+00,f,,mercedes_fo_108y
+268,208,CA2006,V,8,2400,naturally_aspired,,2026-03-23 01:50:37.363183+00,f,,cosworth_ca2006
+269,142,P86/7,V,8,2400,naturally_aspired,,2026-03-23 01:36:37.365319+00,f,,bmw_p86_7
+270,,brm-p200-30-v12,,,,,,,f,,brm_p200_30_v12
+271,195,615-90,V,6,1500,turbocharged,,2026-02-16 17:00:53.195346+00,f,,motori_moderni_615_90
+272,,bristol-bs1-20-l6,,,,,,,f,,bristol_bs1_20_l6
+273,28,FO 108Z,V,8,2400,naturally_aspired,,2026-03-21 20:49:43.016594+00,f,,mercedes_fo_108z
+274,30,E-Tech 20,V,6,1600,hybrid,,2026-02-25 15:58:42.793638+00,f,,renault_e_tech_20
+275,2,066/7,V,6,1600,hybrid,,2026-02-25 00:54:30.826166+00,f,,ferrari_066_7
+276,,ferrari-001-11-30-f12,,,,,,,f,,ferrari_001_11_30_f12
+277,202,A20,V,10,3000,naturally_aspired,,2026-03-04 14:29:47.193181+00,f,,peugeot_a20
+278,,ferrari-056-2006-24-v8,,,,,,,f,,ferrari_056_2006_24_v8
+279,2,125,V,12,1500,supercharged,,2026-02-16 18:49:22.197031+00,f,,ferrari_125
+280,30,F1-2017,V,6,1600,hybrid,,2026-03-10 23:30:13.989773+00,t,TAG Heuer,renault_f1_2017
+281,,mugen-honda-mf-351hb-35-v10,,,,,,,f,,mugen_honda_mf_351hb_35_v10
+282,,ford-109e-15-l4,,,,,,,f,,ford_109e_15_l4
+283,208,CA2010,V,8,2400,naturally_aspired,,2026-03-22 22:14:34.734669+00,f,,cosworth_ca2010
+284,208,CA2012,V,8,2400,naturally_aspired,,2026-03-21 20:44:49.159507+00,f,,cosworth_ca2012
+285,,renault-rs3c-35-v10,,,,,,,f,,renault_rs3c_35_v10
+286,28,FO 108X,V,8,2400,naturally_aspired,,2026-03-22 22:18:29.064037+00,f,,mercedes_fo_108x
+287,193,GBA,V,6,1500,turbocharged,,2026-02-17 03:21:02.648089+00,f,,ford_cosworth_gba
+288,56,RA121E,V,12,3500,naturally_aspired,,2026-03-10 23:42:45.153604+00,f,,honda_ra121e
+289,28,FO 108S,V,8,2400,naturally_aspired,,2026-03-23 01:51:19.06085+00,f,,mercedes_fo_108s
+290,193,DFZ,V,8,3500,naturally_aspired,,2026-02-20 20:59:13.507281+00,f,,ford_cosworth_dfz
+291,193,DFY,V,8,3000,naturally_aspired,,2026-02-16 01:30:45.72501+00,f,,ford_cosworth_dfy
+292,,honda-ra003e-30-v10,,,,,,,f,,honda_ra003e_30_v10
+293,1,890T,V,8,1500,turbocharged,,2026-02-15 20:29:00.26887+00,f,,alfa_romeo_890t
+294,,ferrari-044-1-30-v12,,,,,,,f,,ferrari_044_1_30_v12
+295,2,033E,V,6,1500,turbocharged,,2026-02-21 00:35:38.658964+00,f,,ferrari_033e
+296,,Honda Ra621H 16 V6 T H,,,,,,,f,,honda_ra621h_16_v6_t_h
+297,30,E-Tech RE23,V,6,1600,hybrid,,2026-02-24 23:58:38.45009+00,f,,renault_e_tech_re23
+298,,ats-100-15-v8,,,,,,,f,,ats_100_15_v8
+299,2,037,V,12,3500,naturally_aspired,,2026-03-11 00:12:12.424927+00,f,,ferrari_037
+300,,ferrari-041-35-v12,,,,,,,f,,ferrari_041_35_v12
+301,56,RA620H,V,6,1600,hybrid,,2026-02-25 15:53:51.855791+00,f,,honda_ra620h
+302,,mercedes-benz-2175b-35-v10,,,,,,,f,,mercedes_benz_2175b_35_v10
+303,2,056,V,8,2400,naturally_aspired,,2026-03-13 20:43:36.875251+00,t,,ferrari_056
+304,30,RS27-2010,V,8,2400,naturally_aspired,,2026-03-22 22:24:11.710865+00,f,,renault_rs27_2010
+305,91,1500/4,L,4,1500,turbocharged,,2026-02-16 14:36:23.888186+00,f,,zakspeed_1500_4
+306,48,RVX-06,V,8,2400,naturally_aspired,,2026-03-23 01:48:10.340111+00,f,,toyota_rvx_06
+307,49,A20E,V,10,3000,naturally_aspired,,2026-03-04 00:42:06.237236+00,f,,arrows_a20e
+308,28,M09,V,6,1600,hybrid,,2026-02-27 03:55:19.493987+00,f,,mercedes_m09
+309,2,066/15,V,6,1600,hybrid,,2026-02-23 19:38:45.70061+00,f,,ferrari_066_15_2
+310,,yamaha-ox11a-30-v10,,,,,,,f,,yamaha_ox11a_30_v10
+311,56,RA807E,V,8,2400,naturally_aspired,,2026-03-23 01:38:54.872269+00,f,,honda_ra807e
+312,,weslake-58-30-v12,,,,,,,f,,weslake_58_30_v12
+313,28,PU106B,V,6,1600,hybrid,,2026-03-13 20:48:11.791123+00,f,,mercedes_pu106b
+314,,yamaha-ox10b-35-v10,,,,,,,f,,yamaha_ox10b_35_v10
+315,207,FB01,V,10,3000,naturally_aspired,,2026-03-04 00:31:08.518171+00,f,,supertec_fb01
+316,,maserati-250f1-25-l6,,,,,,,f,,maserati_250f1_25_l6
+317,28,M11,V,6,1600,hybrid,,2026-02-24 00:58:05.281222+00,f,,mercedes_m11
+318,,vanwall-254-25-l4,,,,,,,f,,vanwall_254_25_l4
+319,204,SPE-01,V,10,3000,naturally_aspired,,2026-03-01 04:38:57.399868+00,f,,petronas_spe_01
+320,56,RBPTH003,V,6,1600,hybrid,,2026-02-23 19:35:49.078156+00,f,,honda_rbpth003
+321,30,RS8,V,10,3000,naturally_aspired,,2026-03-02 01:57:50.432427+00,f,,renault_rs8
+322,27,FO,,,,,,,f,,mclaren_fo
+323,,toro-rosso-16-v6-t-h,,,,,,,f,,toro_rosso_16_v6_t_h
+324,,brm-p56-15-v8,,,,,,,f,,brm_p56_15_v8
+325,56,RA168E,V,6,1500,turbocharged,,2026-02-21 00:19:35.721765+00,f,,honda_ra168e
+326,,Renault E Tech 20B 16 V6 T H,,,,,,,f,,renault_e_tech_20b_16_v6_t_h
+327,2,033D,V,6,1500,turbocharged,,2026-02-20 21:03:21.300264+00,f,,ferrari_033d
+328,2,062,V,6,1600,hybrid,,2026-02-27 03:34:15.17665+00,f,,ferrari_062
+329,,ford-ec-zetec-r-35-v8,,,,,,,f,,ford_ec_zetec_r_35_v8
+330,142,P86/9,V,8,2400,naturally_aspired,,2026-03-23 01:26:13.659043+00,f,,bmw_p86_9
+331,,ford-edm-30-v8,,,,,,,f,,ford_edm_30_v8
+332,197,EV,V,8,3500,naturally_aspired,,2026-02-21 01:57:24.685753+00,f,,judd_ev
+333,,ferrari-255c-30-v12,,,,,,,f,,ferrari_255c_30_v12
+334,,renault-rs22-30-v10,,,,,,,f,,renault_rs22_30_v10
+335,,Bwt Mercedes 16 V6 T H,,,,,,,f,,bwt_mercedes_16_v6_t_h
+336,30,RS7,V,10,3000,naturally_aspired,,2026-03-02 02:03:42.300781+00,f,,renault_rs7
+337,198,3512,V,12,3500,naturally_aspired,,2026-02-21 02:07:37.012815+00,f,,lamborghini_3512
+338,,veritas-20-l6,,,,,,,f,,veritas_20_l6
+339,28,FO 110J,V,10,3000,naturally_aspired,,2026-03-04 15:02:09.685142+00,f,,mercedes_fo_110j
+340,,Alfa Romeo,,,,,,,f,,alfa_romeo
+341,30,EF1,V,6,1492,turbocharged,,2026-02-14 14:04:38.925463+00,f,,renault_ef1
+342,,asiatech-at02-30-v10,,,,,,,f,,asiatech_at02_30_v10
+343,56,RA619H,V,6,1600,hybrid,,2026-02-25 16:04:34.458492+00,f,,honda_ra619h
+344,,bmw-m12-1-16-l4,,,,,,,f,,bmw_m12_1_16_l4
+345,,ford-cosworth-fva-16-l4,,,,,,,f,,ford_cosworth_fva_16_l4
+346,,ford-edb-30-v8,,,,,,,f,,ford_edb_30_v8
+347,56,R163E,V,6,1500,turbocharged,,2026-02-15 23:59:43.257803+00,f,,honda_r163e
+348,211,01A,V,10,3000,naturally_aspired,,2026-03-07 01:31:35.523637+00,f,,acer_01a
+349,,ferrari-053-30-v10,,,,,,,f,,ferrari_053_30_v10
+350,11,,L,6,1500,supercharged,,2026-03-10 23:27:27.32176+00,f,,era
+351,,ferrari-500-20-l4,,,,,,,f,,ferrari_500_20_l4
+352,,bwt-mercedes-16-v6-t-h,,,,,,,f,,bwt_mercedes_16_v6_t_h_2
+353,,bmw-328-20-l6,,,,,,,f,,bmw_328_20_l6
+354,,ford-cosworth-sca-10-l4,,,,,,,f,,ford_cosworth_sca_10_l4
+355,202,A14,V,10,3000,naturally_aspired,,2026-03-01 04:28:37.805484+00,f,,peugeot_a14
+356,30,EF4B,V,6,1500,turbocharged,,,f,,renault_ef4b
+357,30,EF15B,V,6,1500,turbocharged,,,f,,renault_ef15b
+358,1,415T,L,4,1500,turbocharged,,,f,,alfa_romeo_415t
+359,70,890T,V,8,1500,turbocharged,,,f,,osella_890t
+360,,Cummins,L,6,3000,supercharged,,,f,,cummins
+361,2,036,V,12,3500,naturally_aspired,,,f,,ferrari_036
+362,200,1235,F,12,3500,naturally_aspired,,,f,,subaru_1235
+363,30,E-Tech RE25,V,6,1600,hybrid,,,f,,renault_e_tech_re25
+364,2,066/10,V,6,1600,hybrid,,,f,,ferrari_066_10
+365,2,066,V,6,1600,hybrid,,,f,,ferrari_066
+366,30,E-Tech 21,V,6,1600,hybrid,,,f,,renault_e_tech_21
+367,2,059/5,V,6,1600,hybrid,,,f,,ferrari_059_5
+368,30,RS9,V,10,3000,naturally_aspired,,,f,,renault_rs9
+369,193,ED4,V,8,3000,naturally_aspired,,,f,,ford_cosworth_ed4
+370,28,FO 110E,V,10,3000,naturally_aspired,,,f,,mercedes_fo_110e
+371,4,Offenhauser,L,4,4500,naturally_aspired,,,f,,kurtis_kraft_offenhauser
+373,,Offenhauser,L,4,4500,naturally_aspired,,,f,,offenhauser
+374,,Offenhauser,L,4,4500,naturally_aspired,,,f,,offenhauser_2
+375,,Offenhauser,L,4,4500,naturally_aspired,,,f,,offenhauser_3
+377,5,L4 3.0 S,,,,,,,f,,maserati_l4_3_0_s
+378,,L4 3.0 S,,,,,,,f,,l4_3_0_s
+379,30,RS9B,V,10,3000,naturally_aspired,,,f,,renault_rs9b
+380,189,AFR 26 Hybrid,V,6,1600,hybrid,,,f,,audi_afr_26_hybrid
+381,2,067/6,V,6,1600,hybrid,,,f,,ferrari_067_6
+382,25,Ford DM01,V,6,1600,hybrid,,,f,,red_bull_ford_dm01
+383,2,059/4,V,6,1600,hybrid,,,f,,ferrari_059_4

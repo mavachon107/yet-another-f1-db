@@ -1,0 +1,2 @@
+created_at,updated_at,email,role,is_active,id,password_hash
+2026-02-23 00:44:15.042136,2026-02-23 00:44:15.042136,admin@local.dev,admin,t,1,$2b$12$VSEpJu64ZAibQRJxhq0sB.s8yfyL8s7ZtfqnjFRHlgpucDN76YJrC
