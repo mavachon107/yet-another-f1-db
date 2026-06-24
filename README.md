@@ -1,6 +1,6 @@
-# Yet another F1 data
+# Yet another F1 Database
 
-A historical Formula 1 statistics and data platform covering every season from **1950 to the
+A historical Formula 1 database and web application covering every season from **1950 to the 
 present**. It pairs a curated PostgreSQL dataset of drivers, teams, constructors,
 circuits, cars, engines, race results and championship standings with three ways to
 consume it:
@@ -14,46 +14,6 @@ The stack is a FastAPI backend (SQLModel + PostgreSQL) and a Vite/React frontend
 wired together with Docker Compose.
 
 This is the public repository version of the website https://f1statsdatahub.com
-
----
-
-## Architecture
-
-```
-                        ┌─────────────────────────────────────────┐
-                        │              PostgreSQL 16               │
-                        │                  (f1db)                  │
-                        └─────────────────────────────────────────┘
-                                          ▲
-                                          │ SQLModel / SQLAlchemy
-          ┌───────────────────────────────┴───────────────────────────────┐
-          │                       FastAPI backend                          │
-          │                                                                │
-          │  • Public REST API   /v1/...   (read-only, API-key gated)      │
-          │  • Admin API         /admin/...(JWT auth)                       │
-          │  • MCP server        /mcp (HTTP) + /sse (SSE)                   │
-          │  • Chat endpoint     /chat     (Anthropic Claude)              │
-          │  • Scheduler         OpenF1 auto-fetch (separate process)       │
-          └───────────────────────────────┬───────────────────────────────┘
-                                          │  HTTP
-                        ┌─────────────────┴─────────────────┐
-                        │      React + Vite frontend         │
-                        │   (served by nginx in prod)        │
-                        └────────────────────────────────────┘
-```
-
-| Component  | Tech                                                        | Source dir  |
-| ---------- | ----------------------------------------------------------- | ----------- |
-| Backend    | Python 3.12, FastAPI, SQLModel, SQLAlchemy, Pydantic v2     | `backend/`  |
-| Database   | PostgreSQL 16                                               | —           |
-| Frontend   | React 18, Vite 5, MUI 5, React Router 6, Recharts           | `frontend/` |
-| AI / MCP   | `mcp[cli]`, Anthropic SDK                                   | `backend/`  |
-| Scheduler  | APScheduler (OpenF1 ingestion)                              | `backend/app/scheduler/` |
-| Seed data  | 34 CSV exports (~217k rows)                                 | `data/`     |
-| Tooling    | Import/export & admin scripts                               | `scripts/`  |
-
-The backend exposes **29 routers** and **29 entity models**; the frontend has
-**35 pages**.
 
 ---
 
