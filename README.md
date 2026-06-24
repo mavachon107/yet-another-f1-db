@@ -13,6 +13,8 @@ consume it:
 The stack is a FastAPI backend (SQLModel + PostgreSQL) and a Vite/React frontend, all
 wired together with Docker Compose.
 
+This is the public repository version of the website https://f1statsdatahub.com
+
 ---
 
 ## Architecture
