@@ -1,4 +1,5 @@
 from datetime import datetime
+from typing import Optional
 
 from fastapi import APIRouter, Depends, HTTPException, Query, status
 from sqlalchemy import func
@@ -75,6 +76,40 @@ def _resolve_cars(cars: list[Car], session: Session) -> dict[int, CarResolved]:
     }
 
 
+def _validate_substitute(
+    substitute_entry_id: Optional[int],
+    event_id: Optional[int],
+    self_id: Optional[int],
+    session: Session,
+) -> None:
+    """Ensure a substitute reference points to a valid primary entry.
+
+    The referenced entry must exist, belong to the same event, not be the entry
+    itself, and not itself be a substitute (no chains).
+    """
+    if substitute_entry_id is None:
+        return
+    if self_id is not None and substitute_entry_id == self_id:
+        raise HTTPException(
+            status_code=400, detail="An entry cannot be its own substitute."
+        )
+    primary = session.get(EventEntry, substitute_entry_id)
+    if not primary:
+        raise HTTPException(
+            status_code=404, detail="Substituted entry not found."
+        )
+    if event_id is not None and primary.event_id != event_id:
+        raise HTTPException(
+            status_code=400,
+            detail="Substituted entry must belong to the same event.",
+        )
+    if primary.substitute_entry_id is not None:
+        raise HTTPException(
+            status_code=400,
+            detail="Substituted entry cannot itself be a substitute.",
+        )
+
+
 @admin_router.post("", response_model=EventEntryRead, status_code=status.HTTP_201_CREATED)
 @router.post("", response_model=EventEntryRead, status_code=status.HTTP_201_CREATED)
 def create_entry(
@@ -82,6 +117,9 @@ def create_entry(
     session: Session = Depends(get_session),
     _: User = Depends(require_role({UserRole.admin, UserRole.editor})),
 ) -> EventEntryRead:
+    _validate_substitute(
+        entry_in.substitute_entry_id, entry_in.event_id, None, session
+    )
     entry = EventEntry(**model_dump(entry_in))
     session.add(entry)
     session.commit()
@@ -196,6 +234,7 @@ def list_entries_by_event(
         EventEntryResolved(
             id=entry.id,
             car_number=entry.car_number,
+            substitute_entry_id=entry.substitute_entry_id,
             driver=driver_map.get(entry.driver_id),
             team=team_map.get(entry.team_id),
             car=car_map.get(entry.car_id),
@@ -276,6 +315,7 @@ def list_entries_by_car(
         EventEntryResolvedWithEvent(
             id=entry.id,
             car_number=entry.car_number,
+            substitute_entry_id=entry.substitute_entry_id,
             driver=driver_map.get(entry.driver_id),
             team=team_map.get(entry.team_id),
             car=car_map.get(entry.car_id),
@@ -306,6 +346,9 @@ def count_entries_by_event(
         select(func.count())
         .select_from(EventEntry)
         .where(EventEntry.event_id == event_id)
+        # Substitutes share an already-registered car, so they must not inflate
+        # the per-event entry count.
+        .where(EventEntry.substitute_entry_id.is_(None))
     ).first()
     return {"count": int(count or 0)}
 
@@ -442,6 +485,13 @@ def update_entry(
         raise HTTPException(status_code=404, detail="Entry not found")
 
     update_data = model_dump(entry_in, exclude_unset=True)
+    if "substitute_entry_id" in update_data:
+        _validate_substitute(
+            update_data["substitute_entry_id"],
+            update_data.get("event_id", entry.event_id),
+            entry_id,
+            session,
+        )
     for key, value in update_data.items():
         setattr(entry, key, value)
 

@@ -1,11 +1,37 @@
 /**
+ * Trim a stored datetime string to the `YYYY-MM-DDTHH:mm` shape a
+ * datetime-local input expects (no timezone conversion).
+ */
+export function toDateTimeInput(value) {
+  if (!value) return "";
+  const text = String(value).replace(" ", "T");
+  return text.length >= 16 ? text.slice(0, 16) : text;
+}
+
+/**
+ * Expand a datetime-local input value to a full `YYYY-MM-DDTHH:mm:ss` string
+ * for the API (no timezone conversion). Returns null when empty.
+ */
+export function fromDateTimeInput(value) {
+  if (!value) return null;
+  const text = String(value).trim();
+  if (!text) return null;
+  return text.length === 16 ? `${text}:00` : text;
+}
+
+/**
  * Convert a GMT/UTC ISO string to a datetime-local input value
  * displayed in the given IANA timezone.
  */
 export function gmtToLocal(isoString, timezone) {
   if (!isoString || !timezone) return "";
   try {
-    const d = new Date(isoString);
+    // The stored value is a naive GMT/UTC wall-clock string (no `Z`/offset).
+    // `new Date(str)` would parse a designator-less date-time as *browser-local*
+    // time, skewing the result by the viewer's offset — so pin it to UTC.
+    const text = String(isoString).trim();
+    const hasTz = /[zZ]$|[+-]\d{2}:?\d{2}$/.test(text);
+    const d = new Date(hasTz ? text : `${text.replace(" ", "T")}Z`);
     if (Number.isNaN(d.getTime())) return "";
     const parts = new Intl.DateTimeFormat("en-CA", {
       timeZone: timezone,

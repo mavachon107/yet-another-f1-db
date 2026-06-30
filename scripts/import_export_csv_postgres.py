@@ -22,7 +22,16 @@ SCHEMA = "public"
 REPO_ROOT = Path(__file__).resolve().parents[1]  # assumes scripts/ is under repo root
 DATA_DIR = REPO_ROOT / "data"
 
-EXCLUDE_TABLES = {"alembic_version"}
+EXCLUDE_TABLES = {
+    "alembic_version",
+    # Operational / auth / user-specific tables — not part of the F1 data set.
+    "api_key",
+    "refresh_token",
+    "scheduler_job",
+    "scheduler_log",
+    "user_preference",
+    "user",
+}
 
 # ============================
 

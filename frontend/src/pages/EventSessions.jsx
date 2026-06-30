@@ -1,7 +1,12 @@
 import React, { useCallback, useEffect, useMemo, useState } from "react";
 import { Link, useLocation, useOutletContext, useSearchParams } from "react-router-dom";
 import { apiFetch, apiGet, clearApiCache } from "../lib/api.js";
-import { gmtToLocal, localToGmt } from "../lib/timezone.js";
+import {
+  gmtToLocal,
+  localToGmt,
+  toDateTimeInput,
+  fromDateTimeInput,
+} from "../lib/timezone.js";
 import { isAuthenticated, onAuthChanged } from "../lib/auth.js";
 import { buildEventTabs, resolveActiveEventTab } from "../lib/eventTabs.js";
 import { resolvePrevNextEvents } from "../lib/eventNavigation.js";
@@ -145,19 +150,6 @@ const formatRange = (minValue, maxValue) => {
     return "—";
   }
   return `${minValue} - ${maxValue}`;
-};
-
-const toDateTimeInput = (value) => {
-  if (!value) return "";
-  const text = String(value).replace(" ", "T");
-  return text.length >= 16 ? text.slice(0, 16) : text;
-};
-
-const fromDateTimeInput = (value) => {
-  if (!value) return null;
-  const text = String(value).trim();
-  if (!text) return null;
-  return text.length === 16 ? `${text}:00` : text;
 };
 
 const editIcon = (

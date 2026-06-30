@@ -55,6 +55,11 @@ export default function EventsSeason() {
   const [events, setEvents] = useState([]);
   const [season, setSeason] = useState(null);
   const [sprintEventIds, setSprintEventIds] = useState(new Set());
+  // eventId -> { start, end } timestamps spanning first session start to last
+  // session end; used to flag an event as "In Progress".
+  const [sessionWindowByEventId, setSessionWindowByEventId] = useState(
+    new Map()
+  );
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState("");
   const [activeTab, setActiveTab] = useState("events");
@@ -157,6 +162,7 @@ export default function EventsSeason() {
     setConstructorStandingsError("");
     setConstructorStandingsLoading(false);
     setSprintEventIds(new Set());
+    setSessionWindowByEventId(new Map());
     setSeasonStats(null);
     setSeasonStatsLoading(false);
     setDriverChampion(null);
@@ -187,6 +193,7 @@ export default function EventsSeason() {
           events.map((event) => apiGet(`/sessions/by-event/${event.id}`))
         );
         const sprintIds = new Set();
+        const windowMap = new Map();
         sessionSets.forEach((sessions, index) => {
           const hasSprint = sessions.some(
             (session) => String(session.type || "").toUpperCase() === "SR"
@@ -194,13 +201,33 @@ export default function EventsSeason() {
           if (hasSprint) {
             sprintIds.add(events[index].id);
           }
+          const toMs = (value) => {
+            const ms = new Date(value).getTime();
+            return Number.isNaN(ms) ? null : ms;
+          };
+          const starts = sessions
+            .map((session) => toMs(session.date_time_start))
+            .filter((ms) => ms !== null);
+          const ends = sessions
+            .map((session) =>
+              toMs(session.date_time_end || session.date_time_start)
+            )
+            .filter((ms) => ms !== null);
+          if (starts.length && ends.length) {
+            windowMap.set(events[index].id, {
+              start: Math.min(...starts),
+              end: Math.max(...ends),
+            });
+          }
         });
         if (isActive) {
           setSprintEventIds(sprintIds);
+          setSessionWindowByEventId(windowMap);
         }
       } catch (err) {
         if (isActive) {
           setSprintEventIds(new Set());
+          setSessionWindowByEventId(new Map());
         }
       }
     }
@@ -670,7 +697,7 @@ export default function EventsSeason() {
       : null;
     const countryLabel = resolved?.name || country;
     return (
-      <span>
+      <span className="event-circuit-line">
         <span className="table-driver">
           {alpha2 ? (
             <img
@@ -895,9 +922,21 @@ export default function EventsSeason() {
     async function loadLookups() {
       try {
         setCircuitsLoading(true);
-        const circuitsData = await apiGet("/circuits?limit=1000");
+        const PAGE_SIZE = 100;
+        let offset = 0;
+        let items = [];
+        while (true) {
+          const batch = await apiGet(
+            `/circuits?limit=${PAGE_SIZE}&offset=${offset}`
+          );
+          items = items.concat(batch);
+          if (batch.length < PAGE_SIZE) {
+            break;
+          }
+          offset += PAGE_SIZE;
+        }
         if (!isActive) return;
-        setCircuits(Array.isArray(circuitsData) ? circuitsData : []);
+        setCircuits(items);
         setCircuitsError("");
       } catch (err) {
         if (isActive) {
@@ -947,7 +986,7 @@ export default function EventsSeason() {
         distance: eventForm.distance || null,
         scheduled_distance: eventForm.scheduled_distance || null,
       };
-      const response = await apiFetch("/events/", {
+      const response = await apiFetch("/events", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify(payload),
@@ -1021,6 +1060,13 @@ export default function EventsSeason() {
   const getEventStatus = (event) => {
     const isCancelled = (event.championships || []).some((c) => c.short_name === "f1_cancelled_event");
     if (isCancelled) return { type: "cancelled", label: "Cancelled" };
+    const sessionWindow = sessionWindowByEventId.get(event.id);
+    if (sessionWindow) {
+      const nowMs = Date.now();
+      if (nowMs >= sessionWindow.start && nowMs <= sessionWindow.end) {
+        return { type: "in-progress", label: "In Progress" };
+      }
+    }
     const winner = raceWinnerByEventId.get(event.id);
     if (winner) return { type: "winner", label: winner };
     const eventDate = parseEventDate(event.event_date);

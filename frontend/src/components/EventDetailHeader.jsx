@@ -61,7 +61,7 @@ export default function EventDetailHeader({
     const countryLabel = resolved?.name || country;
 
     return (
-      <span>
+      <span className="event-circuit-line">
         <Link
           to={`/circuits/${event.circuit.slug}`}
           className="table-link"

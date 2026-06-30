@@ -22,6 +22,7 @@ const emptyForm = {
   team_id: "",
   tire_id: "",
   car_number: "",
+  substitute_entry_id: "",
 };
 
 const editIcon = (
@@ -129,7 +130,9 @@ export default function EventEntryList() {
           setSessions(sessionData);
           setSessionCounts(sessionCountData?.by_session_type || {});
           setFastestLapCount(sessionCountData?.fastest_lap || 0);
-          setEntriesCount(entryData.length);
+          setEntriesCount(
+            entryData.filter((item) => !item.substitute_entry_id).length
+          );
           setStandingsCount(standingsCountData?.count || 0);
           setDriverOfTheDayCount(dotdCountData?.count || 0);
           const resolvePositionOne = (items) =>
@@ -325,6 +328,29 @@ export default function EventEntryList() {
   const formatTireOption = (tire) =>
     tire.manufactor_name || tire.short_name || `Tire ${tire.id}`;
 
+  const entryOptionLabel = (entry) => {
+    if (!entry) return "";
+    const number = entry.car_number ? `#${entry.car_number} ` : "";
+    return `${number}${formatDriver(entry.driver)}`;
+  };
+
+  // Entries in this event that a substitute can stand in for: real registered
+  // entries only (not themselves substitutes, and not the entry being edited).
+  const substituteTargetOptions = useMemo(
+    () =>
+      entries.filter(
+        (item) => !item.substitute_entry_id && item.id !== editingEntryId
+      ),
+    [entries, editingEntryId]
+  );
+
+  const substituteForLabel = (substituteEntryId) => {
+    const target = entries.find((item) => item.id === substituteEntryId);
+    return target
+      ? `Substitute for ${entryOptionLabel(target)}`
+      : "Substitute entry";
+  };
+
   const handleSort = (key) => {
     if (sortKey === key) {
       setSortDir((prev) => (prev === "asc" ? "desc" : "asc"));
@@ -458,6 +484,7 @@ export default function EventEntryList() {
         team_id: entry.team_id ?? "",
         tire_id: entry.tire_id ?? "",
         car_number: entry.car_number ?? "",
+        substitute_entry_id: entry.substitute_entry_id ?? "",
       });
       setSaveError("");
       setIsModalOpen(true);
@@ -488,6 +515,7 @@ export default function EventEntryList() {
         team_id: "",
         tire_id: "",
         car_number: "",
+        substitute_entry_id: "",
       });
       setSaveError("");
       setIsModalOpen(true);
@@ -551,6 +579,9 @@ export default function EventEntryList() {
         team_id: formValues.team_id ? Number(formValues.team_id) : null,
         tire_id: formValues.tire_id ? Number(formValues.tire_id) : null,
         car_number: formValues.car_number ? Number(formValues.car_number) : null,
+        substitute_entry_id: formValues.substitute_entry_id
+          ? Number(formValues.substitute_entry_id)
+          : null,
       };
       const response = await apiFetch(
         creatingEntry ? "/event-entries" : `/event-entries/${editingEntryId}`,
@@ -576,7 +607,11 @@ export default function EventEntryList() {
             )
           )
       );
-      setEntriesCount(Array.isArray(refreshed) ? refreshed.length : 0);
+      setEntriesCount(
+        Array.isArray(refreshed)
+          ? refreshed.filter((item) => !item.substitute_entry_id).length
+          : 0
+      );
       setIsModalOpen(false);
       setCreatingEntry(false);
     } catch (err) {
@@ -610,7 +645,11 @@ export default function EventEntryList() {
             )
           )
       );
-      setEntriesCount(Array.isArray(refreshed) ? refreshed.length : 0);
+      setEntriesCount(
+        Array.isArray(refreshed)
+          ? refreshed.filter((item) => !item.substitute_entry_id).length
+          : 0
+      );
       setIsDeleteModalOpen(false);
       setIsModalOpen(false);
       setCreatingEntry(false);
@@ -673,7 +712,11 @@ export default function EventEntryList() {
             )
           )
       );
-      setEntriesCount(Array.isArray(refreshed) ? refreshed.length : 0);
+      setEntriesCount(
+        Array.isArray(refreshed)
+          ? refreshed.filter((item) => !item.substitute_entry_id).length
+          : 0
+      );
       setCopyPrevStatus(
         `Copied ${payload?.copied_count || 0} entries from event ${payload?.previous_event_id || "?"}. Skipped ${payload?.skipped_count || 0}.`
       );
@@ -931,6 +974,14 @@ export default function EventEntryList() {
                             countryByCode={countryByCode}
                           />
                         )}
+                        {entry.substitute_entry_id ? (
+                          <span
+                            className="entry-substitute-badge"
+                            title={substituteForLabel(entry.substitute_entry_id)}
+                          >
+                            SUB
+                          </span>
+                        ) : null}
                       </td>
                       {canEdit ? (
                         <td>
@@ -1130,6 +1181,25 @@ export default function EventEntryList() {
                       +
                     </button>
                   </div>
+                </label>
+                <label>
+                  Substitute for
+                  <select
+                    name="substitute_entry_id"
+                    value={formValues.substitute_entry_id}
+                    onChange={handleFieldChange}
+                  >
+                    <option value="">Not a substitute</option>
+                    {substituteTargetOptions.map((item) => (
+                      <option key={item.id} value={item.id}>
+                        {entryOptionLabel(item)}
+                      </option>
+                    ))}
+                  </select>
+                  <span className="field-hint">
+                    A substitute shares the car of the selected entry and is not
+                    counted as an additional entry.
+                  </span>
                 </label>
               </div>
               {saveError && <div className="status-card error">{saveError}</div>}

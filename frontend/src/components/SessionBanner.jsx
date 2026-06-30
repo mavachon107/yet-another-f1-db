@@ -1,6 +1,11 @@
 import { useState } from "react";
 import { apiFetch, readErrorMessage } from "../lib/api.js";
-import { gmtToLocal, localToGmt } from "../lib/timezone.js";
+import {
+  gmtToLocal,
+  localToGmt,
+  toDateTimeInput,
+  fromDateTimeInput,
+} from "../lib/timezone.js";
 
 const SESSION_TYPE_LABELS = {
   FP1: "Free Practice 1",
@@ -76,24 +81,6 @@ function formatSessionDate(dateTimeStr, timezone) {
   } catch {
     return null;
   }
-}
-
-function toDateTimeInput(value) {
-  if (!value) return "";
-  try {
-    const d = new Date(value);
-    if (Number.isNaN(d.getTime())) return "";
-    const pad = (n) => String(n).padStart(2, "0");
-    return `${d.getFullYear()}-${pad(d.getMonth() + 1)}-${pad(d.getDate())}T${pad(d.getHours())}:${pad(d.getMinutes())}`;
-  } catch {
-    return "";
-  }
-}
-
-function fromDateTimeInput(value) {
-  if (!value) return null;
-  const d = new Date(value);
-  return Number.isNaN(d.getTime()) ? null : d.toISOString();
 }
 
 function deriveTrackCondition(session) {

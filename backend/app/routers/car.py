@@ -95,6 +95,8 @@ def _resolve_cars(cars: list[Car], session: Session) -> list[CarResolved]:
                 .where(
                     EventEntry.car_id.in_(car_ids),
                     ~Event.event_name.ilike("%Pre-Season Testing%"),
+                    # Exclude substitute entries (shared car) from entry counts.
+                    EventEntry.substitute_entry_id.is_(None),
                 )
                 .group_by(EventEntry.car_id)
             ).all()

@@ -70,6 +70,9 @@ const formatRaceDuration = (value) => {
   return `${hours}:${String(remainingMinutes).padStart(2, "0")}:${String(seconds).padStart(2, "0")}${fraction}`;
 };
 
+const hasNumericPosition = (position) =>
+  position !== null && position !== undefined && /^\d+$/.test(String(position).trim());
+
 export default function RaceResultDetails() {
   const canEdit = useAuthStatus();
   const { eventId, eventSlug, seasonYear: seasonParam } = useOutletContext();
@@ -490,7 +493,6 @@ export default function RaceResultDetails() {
                     <th>Team</th>
                     <th>Car</th>
                     <th>Laps</th>
-                    <th>Status</th>
                     <th>Time</th>
                     <th>Gap</th>
                     <th>Points</th>
@@ -551,8 +553,11 @@ export default function RaceResultDetails() {
                       <td>{formatTeam(result.entry?.team)}</td>
                       <td>{formatCar(result.entry?.car)}</td>
                       <td>{result.laps ?? "—"}</td>
-                      <td>{result.retired_reason ?? "Finished"}</td>
-                      <td>{formatRaceDuration(result.time) ?? "—"}</td>
+                      <td>
+                        {hasNumericPosition(result.position)
+                          ? formatRaceDuration(result.time) ?? "—"
+                          : result.retired_reason ?? "—"}
+                      </td>
                       <td>{result.gap ?? "—"}</td>
                       <td>{result.points ?? "—"}</td>
                       {canEdit ? (

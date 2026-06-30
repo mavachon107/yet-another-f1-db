@@ -17,6 +17,12 @@ class EventEntryBase(SQLModel):
     team_id: Optional[int] = Field(default=None, foreign_key="team.id")
     tire_id: Optional[int] = Field(default=None, foreign_key="tire.id")
     car_number: Optional[int] = None
+    # When set, this entry is a substitute (e.g. an FP1-only stand-in) sharing the
+    # car of the referenced primary entry. Substitute rows are excluded from
+    # entry/car counts so they do not show up as an additional registered entry.
+    substitute_entry_id: Optional[int] = Field(
+        default=None, foreign_key="event_entry.id"
+    )
 
 
 class EventEntry(EventEntryBase, TimestampMixin, table=True):
@@ -36,6 +42,7 @@ class EventEntryRead(EventEntryBase, TimestampReadMixin):
 class EventEntryResolved(SQLModel):
     id: int
     car_number: Optional[int] = None
+    substitute_entry_id: Optional[int] = None
     driver: Optional[DriverRead] = None
     team: Optional[TeamRead] = None
     car: Optional[CarResolved] = None
@@ -47,6 +54,7 @@ class EventEntryResolved(SQLModel):
 class EventEntryResolvedWithEvent(SQLModel):
     id: int
     car_number: Optional[int] = None
+    substitute_entry_id: Optional[int] = None
     driver: Optional[DriverRead] = None
     team: Optional[TeamRead] = None
     car: Optional[CarResolved] = None
@@ -63,3 +71,6 @@ class EventEntryUpdate(SQLModel):
     team_id: Optional[int] = Field(default=None, foreign_key="team.id")
     tire_id: Optional[int] = Field(default=None, foreign_key="tire.id")
     car_number: Optional[int] = None
+    substitute_entry_id: Optional[int] = Field(
+        default=None, foreign_key="event_entry.id"
+    )

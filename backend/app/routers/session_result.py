@@ -341,7 +341,11 @@ def list_session_results(
     statement = (
         select(SessionResult)
         
-        .order_by(position_order.nulls_last(), SessionResult.position.asc())
+        .order_by(
+            position_order.nulls_last(),
+            SessionResult.laps.desc().nullslast(),
+            SessionResult.position.asc(),
+        )
         .offset(offset)
         .limit(limit)
     )
@@ -386,7 +390,11 @@ def list_session_results_by_event(
         .where(
             SessionResult.session_id.in_(session_ids),
         )
-        .order_by(position_order.nulls_last(), SessionResult.position.asc())
+        .order_by(
+            position_order.nulls_last(),
+            SessionResult.laps.desc().nullslast(),
+            SessionResult.position.asc(),
+        )
     )
     if normalized_type == "race":
         results_stmt = results_stmt.where(SessionResult.position != "FL")

@@ -12,6 +12,7 @@ import DriverName from "../components/DriverName.jsx";
 import useCountries from "../hooks/useCountries.js";
 import useAuthStatus from "../lib/useAuthStatus.js";
 import SessionBanner from "../components/SessionBanner.jsx";
+import SessionFormModal from "../components/SessionFormModal.jsx";
 
 const editIcon = (
   <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false">
@@ -63,6 +64,7 @@ export default function PracticeDetails() {
   const [activePracticeTab, setActivePracticeTab] = useState("fp1");
   const [activeTab, setActiveTab] = useState("practice");
   const [isModalOpen, setIsModalOpen] = useState(false);
+  const [isSessionModalOpen, setIsSessionModalOpen] = useState(false);
   const [creatingResult, setCreatingResult] = useState(false);
   const [editingResultId, setEditingResultId] = useState(null);
   const [formValues, setFormValues] = useState({
@@ -72,6 +74,7 @@ export default function PracticeDetails() {
     position: "",
     time: "",
     gap: "",
+    laps: "",
   });
   const [saving, setSaving] = useState(false);
   const [saveError, setSaveError] = useState("");
@@ -256,6 +259,7 @@ export default function PracticeDetails() {
       position: "",
       time: "",
       gap: "",
+      laps: "",
     });
     setSaveError("");
     setIsModalOpen(true);
@@ -275,6 +279,7 @@ export default function PracticeDetails() {
         position: result.position ?? "",
         time: result.time ?? "",
         gap: result.gap ?? "",
+        laps: result.laps ?? "",
       });
       setSaveError("");
       setIsModalOpen(true);
@@ -306,6 +311,7 @@ export default function PracticeDetails() {
         position: formValues.position || null,
         time: formValues.time || null,
         gap: formValues.gap || null,
+        laps: formValues.laps ? Number(formValues.laps) : null,
       };
       const url = creatingResult
         ? "/session-results"
@@ -363,6 +369,8 @@ export default function PracticeDetails() {
     return car.chassis_name || "—";
   };
 
+  const circuitTimezone = event?.circuit?.timezone || null;
+
   return (
     <div className="page">
       <SeoHead
@@ -387,6 +395,31 @@ export default function PracticeDetails() {
         }
         tabs={tabs}
         activeTab={activeTab}
+      >
+        {canEdit ? (
+          <button
+            type="button"
+            className="pill"
+            onClick={() => setIsSessionModalOpen(true)}
+          >
+            Create session
+          </button>
+        ) : null}
+      </EventDetailHeader>
+
+      <SessionFormModal
+        isOpen={isSessionModalOpen}
+        onClose={() => setIsSessionModalOpen(false)}
+        eventId={eventId}
+        circuitTimezone={circuitTimezone}
+        editingSession={null}
+        onSaved={(created) =>
+          setSessions((prev) =>
+            prev.find((s) => s.id === created.id)
+              ? prev.map((s) => (s.id === created.id ? created : s))
+              : [...prev, created]
+          )
+        }
       />
 
       {tabs.length > 0 ? (
@@ -634,6 +667,15 @@ export default function PracticeDetails() {
                   <input
                     name="gap"
                     value={formValues.gap}
+                    onChange={handleFieldChange}
+                  />
+                </label>
+                <label>
+                  Laps
+                  <input
+                    type="number"
+                    name="laps"
+                    value={formValues.laps}
                     onChange={handleFieldChange}
                   />
                 </label>

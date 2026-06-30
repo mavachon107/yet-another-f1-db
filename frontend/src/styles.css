@@ -1015,6 +1015,11 @@ main {
   color: var(--on-surface-variant);
 }
 
+.event-status-badge--in-progress {
+  background: rgba(46, 125, 50, 0.12);
+  color: #2e7d32;
+}
+
 .event-status-winner {
   font-size: 0.75rem;
   font-weight: 700;
@@ -1463,6 +1468,26 @@ main {
   flex-direction: column;
   gap: 6px;
   font-size: 0.9rem;
+}
+
+.entry-substitute-badge {
+  display: inline-block;
+  margin-left: 6px;
+  padding: 1px 5px;
+  border-radius: 4px;
+  background: #6b7280;
+  color: #fff;
+  font-size: 0.65rem;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+  vertical-align: middle;
+}
+
+.field-hint {
+  display: block;
+  margin-top: 4px;
+  font-size: 0.78rem;
+  color: #6b7280;
 }
 
 .penalty-editor {
@@ -2377,6 +2402,13 @@ main {
   display: inline-flex;
   align-items: center;
   gap: 8px;
+}
+
+/* Keeps the flag + circuit name block vertically centered with the trailing
+   ", Country" text so the two parts share a baseline. */
+.event-circuit-line {
+  display: inline-flex;
+  align-items: center;
 }
 
 .table-car {

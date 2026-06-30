@@ -167,7 +167,11 @@ def _resolve_constructors(
             session.exec(
                 select(Car.constructor_id, func.count(EventEntry.id))
                 .join(EventEntry, EventEntry.car_id == Car.id)
-                .where(Car.constructor_id.in_(constructor_ids))
+                .where(
+                    Car.constructor_id.in_(constructor_ids),
+                    # Exclude substitute entries (shared car) from entry counts.
+                    EventEntry.substitute_entry_id.is_(None),
+                )
                 .group_by(Car.constructor_id)
             ).all()
         )
