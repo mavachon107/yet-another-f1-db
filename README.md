@@ -16,8 +16,13 @@ Existing F1 datasets (Ergast, OpenF1, Wikipedia) each cover part of the picture.
 
 - Circuit layout **version history** (the Monaco of 1955 ≠ the Monaco of 2024)
 - Structured **penalty records** (drive-through, time penalties, DSQs, reprimands)
+- **Driver of the days** data since 2016
+- **All sessions** start and end date time
+- **Weather and track condition** for all events (pre-1950 and post-1950) 
 - The **regulatory system** each season ran under (technical regulations, sporting regs, budget cap era)
-- A fully **cleaned and verified** historical record going back to 1950
+- The complete world championship **point system** 
+- A fully **cleaned and verified** historical record for pre-1950 races and non-championship events.
+- 
 
 This project aims to build that dataset as a community, with a public REST API and MCP server on top so anyone — human or AI — can query it easily.
 
