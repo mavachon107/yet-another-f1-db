@@ -1,6 +1,15 @@
 first_name,last_name,short_name,driverCode,url,dob,dod,nationality,id,image_url,image_updated_at,created_at,updated_at,j_driver_id,slug
+Colton,Herta,,HRT,https://en.wikipedia.org/wiki/Colton_Herta,2000-03-30,,,1717,,,2026-06-26 19:51:26.831816+00,2026-06-27 01:39:03.59876+00,,colton_herta
+Frederik,Vesti-D,,,,,,,1719,,,2026-06-26 23:25:04.78444+00,2026-06-26 23:30:37.557295+00,,frederik_vesti_d
+Dino,Beganovic-D,,,,,,,1720,,,2026-06-26 23:26:26.874276+00,2026-06-26 23:31:15.551651+00,,dino_beganovic_d
+Leonardo,Fornaroli,,FOR,https://en.wikipedia.org/wiki/Leonardo_Fornaroli,2004-12-03,,ITA,1718,,,2026-06-26 23:23:37.738008+00,2026-06-27 01:43:55.264268+00,,leonardo_fornaroli
 Nick,Heidfeld,nick-heidfeld,HEI,http://en.wikipedia.org/wiki/Nick_Heidfeld,1977-05-10,,DEU,2,,,2026-02-06 15:17:13.067804+00,2026-02-06 15:17:13.067804+00,heidfeld,nick_heidfeld
 Michael,Schumacher,michael-schumacher,MSC,http://en.wikipedia.org/wiki/Michael_Schumacher,1969-01-03,,DEU,30,,,2026-02-06 15:17:13.067804+00,2026-02-06 15:17:13.067804+00,michael_schumacher,michael_schumacher
+Jak,Crawford,,CRA,https://en.wikipedia.org/wiki/Jak_Crawford,2005-05-02,,USA,1721,,,2026-06-27 00:24:24.775443+00,2026-06-27 01:24:25.973897+00,,jak_crawford
+Luke,Browning,luke-browning,BRO,https://en.wikipedia.org/wiki/Luke_Browning,2002-01-31,,GBR,938,,,2026-02-06 15:17:13.067804+00,2026-06-27 01:29:32.02435+00,,luke_browning
+Ayumu,Iwasa,ayumu-iwasa,IWA,https://en.wikipedia.org/wiki/Ayumu_Iwasa,2001-09-22,,JPN,887,,,2026-02-06 15:17:13.067804+00,2026-06-27 01:33:05.875647+00,,ayumu_iwasa
+Ryō,Hirakawa,ryo-hirakawa,HIR,https://en.wikipedia.org/wiki/Ryo_Hirakawa,1994-03-07,,JPN,957,,,2026-02-06 15:17:13.067804+00,2026-06-27 01:34:00.449964+00,,ryo_hirakawa
+Dino,Beganovic,dino-beganovic,BEG,https://en.wikipedia.org/wiki/Dino_Beganovic,2004-01-19,,SWE,904,,,2026-02-06 15:17:13.067804+00,2026-06-27 01:46:56.667394+00,,dino_beganovic
 Lewis,Hamilton,lewis-hamilton,HAM,http://en.wikipedia.org/wiki/Lewis_Hamilton,1985-01-07,,GBR,1,/static/uploads/drivers/1/5a64e1ca07c9497c8a64f8b502463756.png,2026-03-24 00:50:07.188776+00,2026-02-06 15:17:13.067804+00,2026-03-24 00:50:07.184067+00,hamilton,lewis_hamilton
 Sébastien,Bourdais,sebastien-bourdais,BOU,http://en.wikipedia.org/wiki/S%C3%A9bastien_Bourdais,1979-02-28,,FRA,7,,,2026-02-06 15:17:13.067804+00,2026-02-06 15:17:13.067804+00,bourdais,sebastien_bourdais
 Alex,Yoong,alex-yoong,YOO,http://en.wikipedia.org/wiki/Alex_Yoong,1976-07-20,,MYS,62,,,2026-02-06 15:17:13.067804+00,2026-02-06 15:17:13.067804+00,yoong,alex_yoong
@@ -835,7 +844,6 @@ Alexander,Dunne,alexander-dunne,DUN,,2005-11-11,,IRL,878,,,2026-02-06 15:17:13.0
 Alexandre,Prémat,alexandre-premat,PRE,,1982-04-05,,FRA,879,,,2026-02-06 15:17:13.067804+00,2026-02-06 15:17:13.067804+00,,alexandre_premat
 Arvid,Lindblad,arvid-lindblad,LIN,,2007-08-08,,GBR,885,/static/uploads/drivers/885/0dabc4d2d1fd4c4c89a07eaa4d729431.jpg,2026-03-24 00:57:57.692181+00,2026-02-06 15:17:13.067804+00,2026-03-24 00:57:57.687306+00,lindblad,arvid_lindblad
 Asdrúbal,Fontes Bayardo,asdrubal-fontes-bayardo,FON,,1922-12-26,2006-07-09,URY,886,,,2026-02-06 15:17:13.067804+00,2026-02-06 15:17:13.067804+00,,asdrubal_fontes_bayardo
-Ayumu,Iwasa,ayumu-iwasa,IWA,,2001-09-22,,JPN,887,,,2026-02-06 15:17:13.067804+00,2026-02-06 15:17:13.067804+00,,ayumu_iwasa
 Bas,Leinders,bas-leinders,LEI,,1975-07-16,,BEL,888,,,2026-02-06 15:17:13.067804+00,2026-02-06 15:17:13.067804+00,,bas_leinders
 William,Cantrell,bill-cantrell,CAN,,1908-01-31,1996-01-22,USA,889,,,2026-02-06 15:17:13.067804+00,2026-02-06 15:17:13.067804+00,,william_cantrell
 Björn,Wirdheim,bjorn-wirdheim,WIR,,1980-04-04,,SWE,890,,,2026-02-06 15:17:13.067804+00,2026-02-06 15:17:13.067804+00,,bjorn_wirdheim
@@ -851,7 +859,6 @@ Dani,Clos,dani-clos,CLO,,1988-10-23,,ESP,900,,,2026-02-06 15:17:13.067804+00,202
 Daniel,Juncadella,daniel-juncadella,JUN,,1991-05-07,,ESP,901,,,2026-02-06 15:17:13.067804+00,2026-02-06 15:17:13.067804+00,,daniel_juncadella
 David,Kennedy,david-kennedy,KEN,,1953-01-15,,IRL,902,,,2026-02-06 15:17:13.067804+00,2026-02-06 15:17:13.067804+00,,david_kennedy
 Davide,Valsecchi,davide-valsecchi,VAL,,1987-01-24,,ITA,903,,,2026-02-06 15:17:13.067804+00,2026-02-06 15:17:13.067804+00,,davide_valsecchi
-Dino,Beganovic,dino-beganovic,BEG,,2004-01-19,,SWE,904,,,2026-02-06 15:17:13.067804+00,2026-02-06 15:17:13.067804+00,,dino_beganovic
 Dennis,Nalon,duke-nalon,NAL,,1913-03-02,2001-02-26,USA,905,,,2026-02-06 15:17:13.067804+00,2026-02-06 15:17:13.067804+00,,dennis_nalon
 Enrico,Toccacelo,enrico-toccacelo,TOC,,1978-12-14,,ITA,906,,,2026-02-06 15:17:13.067804+00,2026-02-06 15:17:13.067804+00,,enrico_toccacelo
 Egbert,Wietzes,eppie-wietzes,WIE,,1938-05-28,2020-06-10,CAN,907,,,2026-02-06 15:17:13.067804+00,2026-02-06 15:17:13.067804+00,,egbert_wietzes
@@ -860,7 +867,6 @@ Ernest,Pieterse,ernie-pieterse,PIE,,1938-07-04,2017-11-01,ZAF,909,,,2026-02-06 1
 Fabio,Leimer,fabio-leimer,LEI,,1989-04-17,,CHE,910,,,2026-02-06 15:17:13.067804+00,2026-02-06 15:17:13.067804+00,,fabio_leimer
 Fairuz,Fauzy,fairuz-fauzy,FAU,,1982-10-24,,MYS,911,,,2026-02-06 15:17:13.067804+00,2026-02-06 15:17:13.067804+00,,fairuz_fauzy
 Felipe,Drugovich,felipe-drugovich,DRU,,2000-05-23,,BRA,912,,,2026-02-06 15:17:13.067804+00,2026-02-06 15:17:13.067804+00,,felipe_drugovich
-Frederik,Vesti,frederik-vesti,VES,,2002-01-13,,DNK,913,,,2026-02-06 15:17:13.067804+00,2026-02-06 15:17:13.067804+00,,frederik_vesti
 Geoffrey,Lees,geoff-lees,LEE,,1951-05-01,,GBR,914,,,2026-02-06 15:17:13.067804+00,2026-02-06 15:17:13.067804+00,,geoffrey_lees
 Giorgio,Mondini,giorgio-mondini,MOD,,1980-07-19,,CHE,915,,,2026-02-06 15:17:13.067804+00,2026-02-06 15:17:13.067804+00,,giorgio_mondini
 Hans,Stuck,hans-stuck,STU,,1900-12-27,1978-02-09,DEU,916,,,2026-02-06 15:17:13.067804+00,2026-02-06 15:17:13.067804+00,,hans_stuck
@@ -884,7 +890,6 @@ Kimi,Antonelli,kimi-antonelli,ANT,,2006-08-25,,ITA,934,/static/uploads/drivers/9
 Kurt,"Ahrens, Jr.",kurt-ahrens-jr,AHR,,1940-04-19,,DEU,935,,,2026-02-06 15:17:13.067804+00,2026-02-06 15:17:13.067804+00,,kurt_ahrens_jr
 Ludwig,Fischer,ludwig-fischer,FIS,,1915-12-17,1991-03-08,DEU,936,,,2026-02-06 15:17:13.067804+00,2026-02-06 15:17:13.067804+00,,ludwig_fischer
 Luiz,Razia,luiz-razia,RAZ,,1989-04-04,,BRA,937,,,2026-02-06 15:17:13.067804+00,2026-02-06 15:17:13.067804+00,,luiz_razia
-Luke,Browning,luke-browning,BRO,,2002-01-31,,GBR,938,,,2026-02-06 15:17:13.067804+00,2026-02-06 15:17:13.067804+00,,luke_browning
 Qing Hua,Ma,ma-qinghua,QIN,,1987-12-25,,CHN,939,,,2026-02-06 15:17:13.067804+00,2026-02-06 15:17:13.067804+00,,qing_hua_ma
 Maria Teresa,De Filippis,maria-teresa-de-filippis,DEF,,1926-11-11,2016-01-09,ITA,940,,,2026-02-06 15:17:13.067804+00,2026-02-06 15:17:13.067804+00,,maria_teresa_de_filippis
 Masami,Kuwashima,masami-kuwashima,KUW,,1950-09-14,,JPN,941,,,2026-02-06 15:17:13.067804+00,2026-02-06 15:17:13.067804+00,,masami_kuwashima
@@ -893,15 +898,15 @@ Michael,Ammermüller,michael-ammermuller,AMM,,1986-02-14,,DEU,944,,,2026-02-06 1
 Neel,Jani,neel-jani,JAN,,1983-12-08,,CHE,946,,,2026-02-06 15:17:13.067804+00,2026-02-06 15:17:13.067804+00,,neel_jani
 Oscar Alfredo,Gálvez,oscar-alfredo-galvez,GAL,,1913-08-17,1989-12-16,ARG,947,,,2026-02-06 15:17:13.067804+00,2026-02-06 15:17:13.067804+00,,oscar_alfredo_galvez
 Patricio,O'Ward,patricio-oward,OWA,,1999-05-06,,MEX,948,,,2026-02-06 15:17:13.067804+00,2026-02-06 15:17:13.067804+00,,patricio_o_ward
-Paul,Aron,paul-aron,ARO,,2004-02-04,,EST,949,,,2026-02-06 15:17:13.067804+00,2026-02-06 15:17:13.067804+00,,paul_aron
 Raffaele,Marciello,raffaele-marciello,MAR,,1994-12-17,,ITA,950,,,2026-02-06 15:17:13.067804+00,2026-02-06 15:17:13.067804+00,,raffaele_marciello
 Robert,Shwartzman,robert-shwartzman,SHW,,1999-09-16,,RUS,951,,,2026-02-06 15:17:13.067804+00,2026-02-06 15:17:13.067804+00,,robert_shwartzman
 Robert,Wickens,robert-wickens,WIC,,1989-03-13,,CAN,952,,,2026-02-06 15:17:13.067804+00,2026-02-06 15:17:13.067804+00,,robert_wickens
 Robin,Frijns,robin-frijns,FRI,,1991-08-07,,NLD,953,,,2026-02-06 15:17:13.067804+00,2026-02-06 15:17:13.067804+00,,robin_frijns
+Paul,Aron,paul-aron,ARO,https://en.wikipedia.org/wiki/Paul_Aron,2004-02-04,,EST,949,,,2026-02-06 15:17:13.067804+00,2026-06-27 01:39:32.510798+00,,paul_aron
+Frederik,Vesti,frederik-vesti,VES,https://en.wikipedia.org/wiki/Frederik_Vesti,2002-01-13,,DNK,913,,,2026-02-06 15:17:13.067804+00,2026-06-27 01:44:29.043201+00,,frederik_vesti
 Rodolfo,González,rodolfo-gonzalez,GON,,1986-05-14,,VEN,954,,,2026-02-06 15:17:13.067804+00,2026-02-06 15:17:13.067804+00,,rodolfo_gonzalez
 Roy,Nissany,roy-nissany,NIS,,1994-11-30,,ISR,955,,,2026-02-06 15:17:13.067804+00,2026-02-06 15:17:13.067804+00,,roy_nissany
 Ryan,Briscoe,ryan-briscoe,BRI,,1981-09-24,,AUS,956,,,2026-02-06 15:17:13.067804+00,2026-02-06 15:17:13.067804+00,,ryan_briscoe
-Ryō,Hirakawa,ryo-hirakawa,HIR,,1994-03-07,,JPN,957,,,2026-02-06 15:17:13.067804+00,2026-02-06 15:17:13.067804+00,,ryo_hirakawa
 Spider,Webb,spider-webb,WEB,,1910-10-08,1990-01-27,USA,960,,,2026-02-06 15:17:13.067804+00,2026-02-06 15:17:13.067804+00,,spider_webb
 Théo,Pourchaire,theo-pourchaire,POU,,2003-08-20,,FRA,963,,,2026-02-06 15:17:13.067804+00,2026-02-06 15:17:13.067804+00,,theo_pourchaire
 Victor,Martins,victor-martins,MAR,,2001-06-16,,FRA,964,,,2026-02-06 15:17:13.067804+00,2026-02-06 15:17:13.067804+00,,victor_martins
