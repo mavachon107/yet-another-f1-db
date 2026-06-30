@@ -1,159 +1,84 @@
-# Yet another F1 Database
+# Yet Another F1 Database
 
-A historical Formula 1 database and web application covering every season from **1950 to the 
-present**. It pairs a curated PostgreSQL dataset of drivers, teams, constructors,
-circuits, cars, engines, race results and championship standings with three ways to
-consume it:
+> A community-driven Formula 1 historical database covering every season from **1950 to the present** — going beyond what any single source currently offers.
 
-- A **React web app** for browsing seasons, events, drivers, teams and stats dashboards.
-- A **public read-only REST API** (OpenAPI/Swagger documented).
-- An **MCP server** so AI assistants (Claude Desktop, Claude.ai) can query the data
-  conversationally, plus a built-in chat widget powered by Claude.
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)
+[![Contributions Welcome](https://img.shields.io/badge/contributions-welcome-brightgreen.svg)](CONTRIBUTING.md)
+[![Issues](https://img.shields.io/github/issues/mavachon107/yet-another-f1-db)](https://github.com/mavachon107/yet-another-f1-db/issues)
 
-The stack is a FastAPI backend (SQLModel + PostgreSQL) and a Vite/React frontend, all
-wired together with Docker Compose.
-
-This is the public repository version of the website https://f1statsdatahub.com
+**Live site:** [f1statsdatahub.com](https://f1statsdatahub.com)
 
 ---
 
-## The Data
+## Why this project?
 
-The dataset lives in `data/` as one CSV per database table — a full export of the
-PostgreSQL schema. You seed a fresh database by importing these files (see
-[Installation](#installation)).
+Existing F1 datasets (Ergast, OpenF1, Wikipedia) each cover part of the picture. None of them combine:
 
-### Core entities
+- Circuit layout **version history** (the Monaco of 1955 ≠ the Monaco of 2024)
+- Structured **penalty records** (drive-through, time penalties, DSQs, reprimands)
+- The **regulatory system** each season ran under (technical regulations, sporting regs, budget cap era)
+- A fully **cleaned and verified** historical record going back to 1950
 
-| Domain        | Tables (CSV)                                                                                 |
-| ------------- | -------------------------------------------------------------------------------------------- |
-| People & orgs | `driver`, `team`, `team_effective_period`, `constructor`, `constructor_lineage`              |
-| Machinery     | `car`, `engine`, `tire`                                                                       |
-| Venues        | `circuit`, `circuit_version`, `country`                                                       |
-| Calendar      | `season`, `competition`, `event`, `event_entry`, `session`, `session_weather`                |
-| Results       | `session_result`, `standing`, `driver_of_the_day`, `penalty`                                 |
-| Championships | `championship`, `event_championship`                                                          |
-| Rules         | `regulatory_system`, `season_point_system`, `point_system_definition`, `point_system_distance_rule` |
-| Operational   | `user`, `refresh_token`, `api_key`, `user_preference`, `scheduler_job`, `scheduler_log`      |
-
-
-The full relational model (primary keys, foreign keys, relationships) is documented as
-a Mermaid ER diagram in [`docs/db-diagram.md`](docs/db-diagram.md).
-
-### Data sources
-
-- The bulk of the historical data is curated and stored in this repository's CSV exports.
-- Recent/live sessions are kept up to date by the **OpenF1 scheduler** — a standalone
-  process (`backend/app/scheduler/`) that periodically plans and fetches new session
-  results around race weekends. It is **off by default** and enabled explicitly via a
-  Docker Compose profile (see below).
+This project aims to build that dataset as a community, with a public REST API and MCP server on top so anyone — human or AI — can query it easily.
 
 ---
 
-## The APIs
+## Current focus — we need your help!
 
-The backend serves several API surfaces from a single FastAPI app.
+These are the active workstreams. If any of these interest you, jump in:
 
-### 1. Public REST API (read-only)
+| # | Area | Status | What's needed |
+|---|------|--------|----------------|
+| 1 | **Circuit versions** | 🔨 In progress | Historical layout data per season — lengths, configurations, DRS zones |
+| 2 | **Penalty data** | 🔨 In progress | Cleaning and completing penalty records from historical race steward reports |
+| 3 | **Regulatory system** | 📋 Planned | Mapping each season to its governing technical & sporting regulations |
+| 4 | **Data cleaning & verification** | 🔨 In progress | Cross-checking historical results, fixing inconsistencies, filling gaps |
+| 5 | **Stats API** | 📋 Planned | New endpoints for aggregated career and season statistics |
 
-Versioned, read-only endpoints for all public entities. Available two ways:
-
-- Versioned: `GET /v1/drivers`, `GET /v1/events`, `GET /v1/standings`, …
-- Bare alias (latest): `GET /drivers`, `GET /events`, … (rewritten to `/v1/...`)
-
-Resource groups include: `cars`, `championships`, `circuits`, `circuit-versions`,
-`competitions`, `constructors`, `constructor-lineage-links`, `countries`,
-`driver-of-the-day`, `drivers`, `standings`, `engines`, `event-championships`,
-`event-entries`, `events`, `penalties`, `references`, `regulatory-systems`, `seasons`,
-`session-results`, `sessions`, `stats`, `teams`, `tires`.
-
-**Interactive docs (Swagger UI):**
-
-- `GET /docs` — latest public API
-- `GET /v1/docs` — v1 public API
-- `GET /openapi.json`, `GET /v1/openapi.json` — raw OpenAPI schemas
-
-**API keys:** In production the `/v1/` (and aliased) routes require an API key. In
-development this is disabled by default (`REQUIRE_API_KEY=false`). Keys are managed via
-the admin API and the `api_key` table.
-
-### 2. Admin API (authenticated)
-
-Full CRUD over every entity under `/admin/...`, protected by JWT authentication
-(`/auth/login`, refresh tokens). Used by the web app's admin/editor surfaces. Create the
-first admin user with `scripts/create_admin.py` (see below). There is also a CSV
-import/export router (`/csv`).
-
-### 3. MCP server (for AI assistants)
-
-The same data is exposed over the **Model Context Protocol**, so AI clients can call it
-as tools:
-
-- **Streamable HTTP:** `POST /mcp` (newer clients)
-- **SSE:** `GET /sse` + `POST /messages` (Claude.ai remote MCP)
-- **stdio:** run `python backend/mcp_server.py` directly (e.g. for Claude Desktop —
-  config example is in the file's docstring).
-
-**Available MCP tools** (all read-only):
-
-| Tool                          | Description                                            |
-| ----------------------------- | ----------------------------------------------------- |
-| `search_driver`               | Find a driver by name                                 |
-| `get_driver_stats`            | Career stats: starts, wins, poles, podiums, years     |
-| `get_driver_wins`             | All race wins for a driver                             |
-| `get_all_driver_win_counts`   | All drivers ranked by wins                             |
-| `get_all_driver_pole_counts`  | All drivers ranked by poles                            |
-| `search_circuit`              | Find a circuit by name                                 |
-| `get_season_events`           | Events in a given season                               |
-| `get_race_results`            | Results for an event                                   |
-| `get_standings_by_season`     | Driver/constructor standings for a season             |
-| `search_constructor`          | Find a constructor                                     |
-| `search_team`                 | Find a team                                            |
-| `get_constructor_stats`       | Career stats for a constructor                         |
-| `get_overview_stats`          | Headline totals across the dataset                    |
-| `get_season_champions`        | Champions by season                                   |
-| `list_seasons`                | All seasons in the dataset                             |
-
-### 4. Chat endpoint
-
-`POST /chat` powers the in-app chat widget, using Anthropic's Claude with the same set
-of tools as the MCP server to answer F1 questions in natural language. Requires an
-`ANTHROPIC_API_KEY`.
-
-### Utility endpoints
-
-- `GET /health` — health check
-- `GET /sitemap.xml`, `GET /robots.txt` — SEO, generated from the live database
+See the [open issues](https://github.com/mavachon107/yet-another-f1-db/issues) for specific tasks, or the [Wiki](https://github.com/mavachon107/yet-another-f1-db/wiki) for the full data model and contribution guides.
 
 ---
 
-## Installation
+## What's in the repo
+
+```
+yet-another-f1-db/
+├── data/          # CSV exports — one file per database table (the actual dataset)
+├── backend/       # FastAPI app (SQLModel + PostgreSQL)
+├── frontend/      # React/Vite web app
+├── scripts/       # Import/export and admin utilities
+├── docs/          # ER diagram and supplementary documentation
+└── docker-compose.yml
+```
+
+The dataset lives in `data/` as CSVs. The full relational schema is documented as a Mermaid ER diagram in [`docs/db-diagram.md`](docs/db-diagram.md). See the [Wiki → Data Model](https://github.com/mavachon107/yet-another-f1-db/wiki/Data-Model) for an overview of every table.
+
+---
+
+## Quick start
 
 ### Prerequisites
 
 - [Docker](https://www.docker.com/) and Docker Compose
-- (Optional, for running scripts/services outside Docker) Python 3.12 and Node 18+
+- Python 3.12+ (for seeding scripts, outside Docker)
 
 ### 1. Clone and configure
 
 ```bash
-git clone <repo-url> f1-stats-public
-cd f1-stats-public
+git clone https://github.com/mavachon107/yet-another-f1-db.git
+cd yet-another-f1-db
 ```
 
-Create a `.env` file in the repo root. At minimum the backend requires a JWT secret:
+Create a `.env` file at the repo root:
 
-```bash
-# .env
-JWT_SECRET_KEY=replace-with-a-long-random-secret   # required, must not be "change-me"
+```env
+JWT_SECRET_KEY=replace-with-a-long-random-secret   # required
 ACCESS_TOKEN_MINUTES=30
 VITE_APP_VERSION=dev
 
-# Optional — only needed for the in-app chat widget / chat endpoint
+# Optional — only needed for the in-app chat widget
 ANTHROPIC_API_KEY=sk-ant-...
 ```
-
-> The server refuses to start if `JWT_SECRET_KEY` is unset or left as `change-me`.
 
 ### 2. Start the stack
 
@@ -161,61 +86,49 @@ ANTHROPIC_API_KEY=sk-ant-...
 docker compose up --build
 ```
 
-This launches three services:
-
-| Service    | URL / Port                       | Notes                              |
-| ---------- | -------------------------------- | ---------------------------------- |
-| `db`       | `localhost:5432`                 | PostgreSQL 16 (`f1db`/`f1user`)    |
-| `api`      | `http://localhost:8010`          | FastAPI (container port 8000)      |
-| `frontend` | `http://localhost:8081`          | React app (nginx)                  |
-
-The API auto-creates the schema on startup. Verify it's up:
-
-```bash
-curl http://localhost:8010/health        # {"status":"ok"}
-open http://localhost:8010/docs          # Swagger UI
-```
+| Service    | URL                     | Notes                          |
+|------------|-------------------------|--------------------------------|
+| `db`       | `localhost:5432`        | PostgreSQL 16                  |
+| `api`      | `http://localhost:8010` | FastAPI + Swagger UI at `/docs`|
+| `frontend` | `http://localhost:8081` | React app                      |
 
 ### 3. Seed the database
 
-The schema is created automatically, but it starts empty. Import the bundled CSVs with
-the import/export script (run it against the running Postgres container):
-
 ```bash
-# from the repo root, with a local Python that has psycopg2 installed
 export DATABASE_URL="postgresql+psycopg2://f1user:f1password@127.0.0.1:5432/f1db"
 python scripts/import_export_csv_postgres.py import --truncate
 ```
 
-This loads every CSV in `data/`, resolving foreign-key order automatically and resetting
-sequences afterward. To export the current database back to `data/`:
+See the [Wiki → Installation](https://github.com/mavachon107/yet-another-f1-db/wiki/Installation) for full setup details including admin user creation and the optional OpenF1 scheduler.
 
-```bash
-python scripts/import_export_csv_postgres.py export
-```
+---
 
-### 4. Create an admin user
+## Using the API
 
-To access the admin API / editor features:
+The backend exposes three surfaces:
 
-```bash
-export DATABASE_URL="postgresql+psycopg2://f1user:f1password@127.0.0.1:5432/f1db"
-python scripts/create_admin.py --email you@example.com --password 'your-password'
-```
+- **Public REST API** — `GET /v1/drivers`, `/v1/events`, `/v1/standings`, … (Swagger at `/docs`)
+- **Admin API** — full CRUD, JWT-protected (`/admin/...`)
+- **MCP server** — for AI assistants; supports Claude Desktop, Claude.ai remote MCP, and stdio
 
-### 5. (Optional) Enable the OpenF1 scheduler
+See the [Wiki → API Reference](https://github.com/mavachon107/yet-another-f1-db/wiki/API-Reference) for the full endpoint list and MCP tool catalog.
 
-The auto-fetch scheduler is defined behind a Compose profile and is off by default:
+---
 
-```bash
-# long-running scheduler
-docker compose --profile scheduler up scheduler
+## Contributing
 
-# or a single planning + fetch pass
-docker compose run --rm scheduler python -m app.scheduler --once
-```
+Contributions of all kinds are welcome — data, code, documentation, or just catching errors.
 
-## Notes
+Read [CONTRIBUTING.md](CONTRIBUTING.md) to get started. Short version:
 
-- This project bundles historical Formula 1 data for reference and statistics; it is not
-  affiliated with Formula 1, the FIA, or any team.
+1. Check the [open issues](https://github.com/mavachon107/yet-another-f1-db/issues) for something labeled `help wanted` or `good first issue`
+2. Fork the repo and create a branch
+3. Make your changes and open a PR
+
+Data contributions (CSV fixes, new records) are especially valuable right now. You don't need to run the full stack to help — a spreadsheet editor and a text editor are enough.
+
+---
+
+## Disclaimer
+
+This project bundles historical Formula 1 data for reference and statistical purposes. It is not affiliated with Formula 1, the FIA, or any team.
